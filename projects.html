@@ -1,27 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>J. Go - Projects </title>
+	<title>J. Go - Recent Graduate in Electrical Engineering </title>
 	<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+
+<!-- Internal CSS Style Sheet -->
 	
 <style>
 body {
-	background: #EEEEE0;
+	background: #778899;
 	font-family: Lucida Sans Unicode, Tahoma, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 	overflow: auto;
-}
-
-p {
-	padding: 3%
-	color: #ADD8E6;
 }	
-
+h1, h2, h3 {
+	text-align: center;
+	padding-left: 5%
+	color: #E0FFFF;
+}
+p {
+	padding: 2%
+	color: #ECF1EF;
+}
+img {
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+#wrapper {
+	margin: 0 auto;
+	max-width: 100%;
+	width:98%;
+	background: #ECF1EF;
+	border: 1px solid #E0FFFF;
+	border-radius: 2px;
+	box-shadow: 0 0 10px 0px rgba(12, 3, 25, 0.8);
+}
+header {
+	width: 96%;
+	min-height: 125px;
+	padding: 5px;
+	text-align: center;
+}
+#header1 {
+	font-size: 50px;
+	font-style: bold;
+	color: #838B83;
+}
+#header2 {
+	font-size: 20px;
+	color: #2E8B57;
+}
 nav ul {
 	list-style: none;
 	margin: 0;
-
+	display: center;
 }
 nav ul li {
 	float: left;
@@ -47,31 +84,104 @@ nav ul li a:hover, nav ul li.active a {
 	border-top: 1px solid #FFF5EE;
 	border-bottom: 1px solid #FFF5EE;
 }
+.clearfix {
+	clear: both;
+}
+.left-col {
+	width: 55%;
+	float: left; 
+	margin: -2% 1% 1% 1%; 
+}
 .sidebar {
 	width: 40%;
 	float: right;
-	margin: 2%;
+	margin: 1%;
 	text-align: center;
 }
-.sidebar2 {
-	width: 40%;
-	float: right;
-	margin: 2%;
-	text-align: center;
+.therapy {
+	float: left;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	padding: 1%;
 }
-
 .section {
 	width: 29%
 	float: left;
 	margin: 1% 1%;
 	text-align: center; 
 }
-
-#right-text {
-	width: 55%;
-	float: right; 
-	margin: -2% 1% 1% 1%; 
+footer {
+	background: #C1CDC1;
+	width: 100%;
+	overflow: hidden: 
 }
+footer p, footer h3 {
+	color: #FDF5E6;
+}
+footer p a {
+	color: #778899;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	display: inline; 
+}
+ul li img {
+	height: 50px;
+}
+/*-------------MEDIA-----------------*/
+@media screen and (max-width: 478px) {
+	body {
+		font-size: 13px;
+	}
+}
+@media screen and (max-width: 740px) {
+	nav {
+		width: 100%;
+		margin-button: 10px;
+	}
+	nav ul{
+		list-style: none;
+		margin: 0 auto;
+		padding-left: 0;
+	}
+	nav ul li {
+		text-align: center;
+		margin-left: 0 auto;
+		width: 100%; 
+		border-top: 1px solid #ECF1EF;
+		border-right: 0px solid #ECF1EF;
+		border-bottom: 1px solid #ECF1EF;
+		border-left: 0px solid #ECF1EF;
+	}
+	nav ul li a {
+		padding: 8px 0px; 
+		font-size: 16px; 
+	}
+	.left-col {
+		width: 100%;
+	}
+	.sidebar {
+		width: 100%;
+	}
+	.section {
+		float: left;
+		width: 100%;
+		margin: 0;
+	}
+}
+</style>
+
+<!-- End Internal CSS Style Sheet -->
+
+
+</head>
+
 </style>
 </head>
 
@@ -115,12 +225,7 @@ nav ul li a:hover, nav ul li.active a {
 		<br>
 		<br>
 		<br>
-		<aside class="sidebar2">
-			<div style="height: 300px">
-				<img src="resources/images/mothergoose1.png" alt=" " style="width: 30%;max-height: 100%" />
-				<img src="resources/images/mockcrib.png" alt=" " style="width: 30%;max-height: 100%" />
-			</div>
-		</aside>
+		
 		
 		<p><b> Past Projects: </b><br>
 		<section class="right-text">
@@ -137,6 +242,13 @@ nav ul li a:hover, nav ul li.active a {
 			receiving alerts and displaying breathing data, but our time constraints limited us to separate 
 			native SMS and web page data display. <br>
 		</p> <br>
+		
+		<aside class="sidebar2">
+			<div style="height: 300px">
+				<img src="resources/images/mothergoose1.png" alt=" " style="width: 20%;max-height: 100%" />
+				<img src="resources/images/mockcrib.png" alt=" " style="width: 20%;max-height: 100%" />
+			</div>
+		</aside>
 		
 		<p><u>Landscape Evolution Simulations in MATLAB</u></p><br>
 		<div style="height: 400px">
@@ -157,5 +269,6 @@ nav ul li a:hover, nav ul li.active a {
 		
 	</div>
 </body>
+
 
 </html>
