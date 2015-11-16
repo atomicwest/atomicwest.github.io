@@ -1,4 +1,11 @@
-div {
+body {
+	background: #ecf2f9;
+	font-family: Lucida Sans Unicode, Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	overflow: auto;
+}	
+
+#button1 {
     height: 60px;
     width: 100px;
     border-radius: 5px;
