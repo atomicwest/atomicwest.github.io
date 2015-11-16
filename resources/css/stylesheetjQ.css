@@ -50,3 +50,12 @@ header {
 	text-align: center;
 }
 
+#wrapper {
+	margin: 0 auto;
+	max-width: 100%;
+	width:98%;
+	background: #ECF1EF;
+	border: 1px solid #E0FFFF;
+	border-radius: 2px;
+	box-shadow: 0 0 10px 0px rgba(12, 3, 25, 0.8);
+}
