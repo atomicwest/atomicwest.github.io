@@ -5,13 +5,58 @@ body {
 	overflow: auto;
 }	
 
-#button1 {
-    height: 60px;
+#buttonHome {
+    height: 30px;
     width: 100px;
     border-radius: 5px;
     background-color: #00bfff;
     text-align: center;
     color: #FFFFFF;
     font-family: Verdana, Arial, Sans-Serif;
-    opacity: 0.5;
+    opacity: 0.6;
 }
+
+#buttonResume {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #3399ff
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    opacity: 0.6;
+}
+
+#buttonProjects {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #1a75ff;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    opacity: 0.6;
+}
+
+#buttonMisc {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #0000ff;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    opacity: 0.6;
+}
+
+#buttonContact {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #0000cc;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    opacity: 0.6;
+}
+
