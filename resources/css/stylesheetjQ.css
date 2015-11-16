@@ -1,5 +1,5 @@
-#red {
-    background-color:#FF0000;
+#orange {
+    background-color:#ff6600;
 }
 
 #blue {
@@ -11,12 +11,12 @@
 }
 
 #green {
-    background-color:#008800;
+    background-color:#008080;
 }
 
 
-div {
-	background: #e5f7ff;
+body {
+	background: #e5f2ff;
 	font-family: Lucida Sans Unicode, Tahoma, Arial, sans-serif;
 	font-size: 12px;
 	overflow: auto;
