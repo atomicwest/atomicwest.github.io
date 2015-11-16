@@ -1,5 +1,22 @@
+#red {
+    background-color:#FF0000;
+}
+
+#blue {
+    background-color:#0000FF;
+}
+
+#yellow {
+    background-color:#E2BE22;
+}
+
+#green {
+    background-color:#008800;
+}
+
+
 body {
-	background: #778899;
+	background: #e5f7ff;
 	font-family: Lucida Sans Unicode, Tahoma, Arial, sans-serif;
 	font-size: 12px;
 	overflow: auto;
@@ -36,18 +53,3 @@ header {
 	text-align: center;
 }
 
-#red {
-    background-color:#FF0000;
-}
-
-#blue {
-    background-color:#0000FF;
-}
-
-#yellow {
-    background-color:#E2BE22;
-}
-
-#green {
-    background-color:#008800;
-}
