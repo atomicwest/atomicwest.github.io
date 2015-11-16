@@ -15,21 +15,26 @@
 }
 
 
-div {
-	background: #e5f2ff;
-	font-family: Lucida Sans Unicode, Tahoma, Arial, sans-serif;
-	font-size: 12px;
-	overflow: auto;
-}	
+
 h1, h2, h3 {
 	text-align: center;
 	padding-left: 5%
 	color: #E0FFFF;
+
+	background: #e5f2ff;
+	font-family: Lucida Sans Unicode, Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	overflow: auto;
 }
 p {
 	padding: 2%
 	color: #ECF1EF;
 	font-size: 40px;
+
+	background: #e5f2ff;
+	font-family: Lucida Sans Unicode, Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	overflow: auto;
 }
 img {
 	text-align: center;
