@@ -1,7 +1,7 @@
 body {
 	background: #778899;
 	font-family: Lucida Sans Unicode, Tahoma, Arial, sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 	overflow: auto;
 }	
 h1, h2, h3 {
@@ -36,7 +36,7 @@ header {
 	text-align: center;
 }
 #header1 {
-	font-size: 50px;
+	font-size: 30px;
 	font-style: bold;
 	color: #838B83;
 }
