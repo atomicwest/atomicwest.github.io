@@ -46,7 +46,7 @@ header {
 }
 nav ul {
 	list-style: none;
-	margin: 1 auto;
+	margin: 0;
 	display: center;
 }
 nav ul li {
