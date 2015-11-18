@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Atomic EaselJS and CreateJS </title>
+  
+<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+
+
+<!-- call EaselJS within an init function-->
+
+<script type="text/javascript">
+ function init(){
+   // stage will hold display objects
+   var stage = new createjs.Stage("AtomiCanvas");
+
+	
+	var circ = new createjs.Shape();
+	circ.graphics.beginFill("#66ffff").drawRect(10,10,50,50);
+	circ.x = 100;
+	circ.y = 120;
+	stage.addChild(circ);
+	createjs.Tween.get(circ, {loop:true})
+		.to({x: 200}, 900, createjs.Ease.getPowInOut(4))
+		.to({ alpha:0 , y:175 }, 500, createjs.Ease.getPowInOut(2))
+		.to({ alpha:0 , y:195 }, 100)
+		.to({ alpha:1 , y:225 }, 500, createjs.Ease.getPowInOut(2))
+		
+		.to({ x:100 }, 800, createjs.Ease.getPowInOut(2));
+		.to({ alpha:0 , y:120 }, 900);
+	createjs.Ticker.setFPS(120);
+	createjs.Ticker.addEventListener("tick", stage);
+
+   var rct = new createjs.Shape();
+   rct.graphics.beginFill("#3333ff").drawRect(10,10,150,150);
+   rct.x = 200;
+   rct.y = 300;
+
+   stage.addChild(rct);
+   stage.update();
+ }
+</script>
+
+</head>
+
+<!-- create and call canvas element -->
+
+<body onLoad="init();">
+  <canvas id="AtomiCanvas" width="800" height="600"></canvas>
+</body>
+</html>
