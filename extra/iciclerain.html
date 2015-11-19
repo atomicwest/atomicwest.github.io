@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+	<meta charset="utf-8"/>
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+	<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+
+<head>
+	<title>NeoRain</title>
+</head>
+
+
+<script>
+	function init(){
+		var stage = new createjs.Stage("raincan");
+		
+		var drop = new createjs.Shape();
+		drop.graphics.beginStroke("#768a95").beginFill("#a4cde3");
+		drop.graphics.moveTo(30,30).lineTo(40,20).lineTo(50,30).lineTo(40,100).lineTo(30,30);
+		//drop.graphics.beginFill("#1d4b6f");
+		
+		var randtxt = new createjs.Text("Icicle Drop", "bold 13px italic", "#66ffc2" );
+		randtxt.x = 40;
+		randtxt.y = 25;
+		
+		var container = new createjs.Container();
+		container.addChild(drop,randtxt);
+		container.x = 140;
+		container.y = 20;
+	
+		createjs.Tween.get(container, {loop:true})
+			//container.x = Math.floor(Math.random()*50);
+			//container.y = Math.floor(Math.random()*50);
+			//endx = container.x + Math.floor(Math.random()*10);
+			//endy = container.y + Math.floor(Math.random()*200);
+			.to({alpha:0,y:200},900)
+		
+		createjs.Ticker.setFPS(200);
+		createjs.Ticker.addEventListener("tick",stage);
+		
+		stage.addChild(container);
+		stage.update();
+	}
+
+
+</script>
+
+
+<body onLoad="init();">
+	<canvas id="raincan" width="800" height="300"></canvas>
+</body>
+
+</html>
