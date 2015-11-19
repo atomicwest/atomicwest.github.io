@@ -12,9 +12,23 @@
 
 
 <script>
+	var container;
+	/*
+	init() must create:
+	1. the canvas
+	2. the stage, which will be pointed at the canvas
+	3. shape objects for the action
+		a. dimensions
+		b. velocities
+	4. any other objects for the action
+	5. start the cache
+	6. create the ticker and point at window
+	
+	*/
 	function init(){
 		var stage = new createjs.Stage("raincan");
 		
+		for (var i=1; i<15; i++){
 		var drop = new createjs.Shape();
 		drop.graphics.beginStroke("#768a95").beginFill("#a4cde3");
 		drop.graphics.moveTo(30,30).lineTo(40,20).lineTo(50,30).lineTo(40,100).lineTo(30,30);
@@ -24,14 +38,16 @@
 		randtxt.x = 40;
 		randtxt.y = 25;
 		
-		var container = new createjs.Container();
+		
+		container = new createjs.Container();
 		container.addChild(drop,randtxt);
-		container.x = 140;
-		container.y = 20;
+		//container.x = 140;
+		//container.y = 20;
+		container.x = Math.floor(Math.random()*100);
+		container.y = Math.floor(Math.random()*50);
 	
-		createjs.Tween.get(container, {loop:true})
-			//container.x = Math.floor(Math.random()*50);
-			//container.y = Math.floor(Math.random()*50);
+		createjs.Tween.get(container, {loop:false})
+			
 			//endx = container.x + Math.floor(Math.random()*10);
 			//endy = container.y + Math.floor(Math.random()*200);
 			.to({alpha:0,y:200},900)
@@ -41,6 +57,7 @@
 		
 		stage.addChild(container);
 		stage.update();
+		}
 	}
 
 
