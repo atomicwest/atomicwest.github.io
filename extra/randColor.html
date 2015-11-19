@@ -1,12 +1,13 @@
+
 <html>
 
 <meta charset="utf-8"/>
+
+	<script src="Button.js"></script>
+	<script src="easeljs-NEXT.js"></script>
 <head>
 
-	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
-	<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
-	<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
-
+	
 </head>
 
 <style>
@@ -29,6 +30,30 @@
 		color: 	#000066
 	
 	}
+	
+	.Button {
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button:hover {
+	background-color:#5cbf2a;
+}
+.Button:active {
+	position:relative;
+	top:1px;
+}
+
 </style>
 
 	<title>Random Color Generator</title>
@@ -37,8 +62,10 @@
 		<div></div>
 		<script type="text/javascript">
 			function init(){
-			
-				var stage = new createjs.Stage("maincan");
+
+
+				//create canvas for easeljs
+				stage = new createjs.Stage("maincan");
 				
 				//random color code string
 				function randcol(){
@@ -61,7 +88,7 @@
 				coltest.y = 250;
 				//coltest.Text = "Random number : " + randcol()[0];
 				coltest.Text = "IterVar : " + randcol()[0];
-				stage.update();
+				
 				
 				//display rectangle
 				var colordis = new createjs.Shape();
@@ -70,9 +97,20 @@
 				colordis.y = 90;
 				
 				stage.addChild(colordis); 
-								
-				stage.update();
 				
+				
+
+				//create button
+				/*
+				stage.enableMouseOver();
+				
+				var buttonsw = stage.addChild(new Button("New Color","#27ed2b");
+				buttonsw.x = 30;
+				buttonsw.y = 30;
+				
+				createjs.Ticker.on("tick", stage);
+				*/
+				stage.update();
 			}
 		</script>
 		
@@ -82,5 +120,10 @@
 	<body onLoad="init();">
 		<canvas id="maincan" width="300" height="300"></canvas>
 	</body>
-	<p>This color</p>
+	
+	<p>
+		<button type="Button" class="btn btn-primary btn-lg" onclick="init()">
+		GET COLOR
+		</button>
+	</p>
 </html>
