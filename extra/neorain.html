@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+	<meta charset="utf-8"/>
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+	<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+
+<head>
+	<title>NeoRain</title>
+</head>
+
+
+<script>
+	var container;
+	var ishort = 20;
+	var canvas;
+	var stage;
+	/*
+	init() must create:
+	1. the canvas
+	2. the stage, which will be pointed at the canvas
+	3. shape objects for the action
+		a. dimensions
+		b. velocities
+	4. any other objects for the action
+	5. start the cache
+	6. create the ticker and point at window
+	
+	*/
+	function init(){
+		canvas = document.getElementById("raincan")
+		stage = new createjs.Stage(canvas);
+		
+		for (var i=1; i<15; i++){
+			var drop = new createjs.Shape();
+			drop.graphics.beginStroke("#768a95").beginFill("#a4cde3");
+			drop.graphics.moveTo(30,30).lineTo(40,20).lineTo(50,30).lineTo(40,100).lineTo(30,30);
+			//drop.graphics.beginFill("#1d4b6f");
+		
+			var randtxt = new createjs.Text("Icicle Drop", "bold 13px italic", "#66ffc2" );
+			randtxt.x = 40;
+			randtxt.y = 25;
+		
+		
+			container = new createjs.Container();
+			container.addChild(drop,randtxt);
+			//container.x = 140;
+			//container.y = 20;
+			container.x = Math.floor(Math.random()*canvas.width);
+			container.y = Math.floor(Math.random()*canvas.height);
+			container.velx = Math.random() * 10 - 4;
+			container.vely = Math.random() * 10 - 4;
+			//not sure if snapToPixel is an attribute for container?
+			//shape.snapToPixel = true;
+			
+			/*
+			createjs.Tween.get(container, {loop:true})				
+				//endx = container.x + Math.floor(Math.random()*10);
+				//endy = container.y + Math.floor(Math.random()*200);
+				.to({alpha:0,y:200},900)
+			*/
+			
+			toggleCache(true);
+			
+			//createjs.Ticker.setFPS(200);
+			createjs.Ticker.timingMode = createjs.Ticker.RAF;
+			createjs.Ticker.addEventListener("tick",tick);	
+			
+			stage.addChild(container);
+			stage.update();
+		}
+	}
+
+	function tick(event){
+	
+		var w = canvas.width + ishort*2;
+		var h = canvas.height + ishort*2;
+		var l = stage.getNumChildren() - 1;
+		
+		for (var i=1; i<ll i++){
+			var shape = stage.getChildAt(i);
+			shape.x = (shape.x + ishort + shape.velx + w) % w - ishort;
+			shape.y = (shape.y + ishort + shape.vely + h) % h - ishort;
+		}
+		
+		stage.update(event);
+	}
+
+	function toggleCache(value) {
+		//iterate all children except fpsLabel, and set up cache;
+		var shape = stage.getChildAt(i);
+		for(var j=0; j<l; j++){
+			if (value) {
+				shape.cache(-ishort, -ishort, ishort*2, ishort*2);
+			}
+			else{ 
+			shape.uncache();
+			}
+		}
+	}
+	
+</script>
+
+<body onLoad="init();">
+	<canvas id="raincan" width="800" height="300"></canvas>
+</body>
+
+</html>
