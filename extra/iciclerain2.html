@@ -23,6 +23,7 @@
 		canvas = document.getElementById("raincan")
 		stage = new createjs.Stage(canvas);
 		
+		/*
 		//create a black backdrop for the animation
 		backgroundmain = new createjs.Shape();
 		//backgroundmain.graphics.beginFill("black").drawRect(0,0,canvas.width, canvas.height);
@@ -30,6 +31,7 @@
 		backgroundmain.graphics.beginFill("black").drawRect(-10,-10,8000, 3000);
 		stage.addChild(backgroundmain);
 		stage.update();
+		*/
 		
 		var gradient = ['#e5f2ff','#cce5ff','#99ccff','#66b2ff','#3399ff','#007fff','#0066cc','#004c99','#003366','#000d1a'];
 		
@@ -38,7 +40,8 @@
 			
 			for(var v=gradient.length; v>0; v--){
 				drop.graphics.beginFill(gradient[gradient.length-v]);
-				drop.graphics.moveTo(30+1.5*v,30-3*v).lineTo(40,20-3*v).lineTo(50-1.5*v,30-3*v).lineTo(40,100-5*v).lineTo(30+1.5*v,30-3*v);
+				//drop.graphics.beginFill(gradient[v]);
+				drop.graphics.moveTo(30-1.5*v,30+3*v).lineTo(40,20-3*v).lineTo(50+1.5*v,30+3*v).lineTo(40,100+5*v).lineTo(30-1.5*v,30+3*v);
 			}
 		/*
 			var randtxt = new createjs.Text("Icicle Drop", "bold 13px italic", "#66ffc2" );
