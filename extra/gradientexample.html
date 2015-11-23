@@ -1,0 +1,45 @@
+<html>
+	<meta charset="utf-8"/>
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+	<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+	
+	<title>Gradient Example</title>
+	
+	<script type="text/javascript">
+		function init(){
+			var canvas = document.getElementById("gradcan")
+			stage = new createjs.Stage(canvas)
+			
+			var windu = new createjs.Shape();
+			windu.graphics.beginLinearGradientFill(["#0099ff",
+				"rgba(0,0,0,0)"], [0,1],0,0,200,200)
+			windu.graphics.drawRoundRect(100,100,150,200,30);
+			//windu.cache(0,0,200,200);
+			
+			var rdrop = new createjs.Shape();
+			rdrop.graphics.beginRadialGradientFill(["#fff","#6666ff","rgba(0,0,0,0)"],
+			[0,0,1], 100,100,10,100,100,50)
+			rdrop.graphics.drawCircle(100,100,100);
+			
+			stage.addChild(windu, rdrop);
+			stage.update();
+			
+			var bmpimg = new createjs.Bitmap("C:\Users\jgo\Pictures\assorted_rings_011.jpg");
+			bmpimg.filters=[
+				new createjs.AlphaMaskFilter(windu.cacheCanvas)];
+			bmpimg.cache(0,0,200,200);
+			
+			stage.addChild(bmpimg);
+			
+			stage.update();
+			}
+	</script>
+
+	<body onLoad="init();">
+		<canvas id="gradcan" width="640" height="480"
+		style="background-color:#000">
+		</canvas>
+	</body>
+	
+</html>
