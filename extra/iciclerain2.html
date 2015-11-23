@@ -39,8 +39,10 @@
 			var drop = new createjs.Shape();
 			
 			for(var v=gradient.length; v>0; v--){
-				drop.graphics.beginFill(gradient[gradient.length-v]);
-				//drop.graphics.beginFill(gradient[v]);
+				//uncomment for dark core gradient to light border
+				//drop.graphics.beginFill(gradient[gradient.length-v]);
+				//uncomment for light core gradient to dark border
+				drop.graphics.beginFill(gradient[v]);
 				drop.graphics.moveTo(30-1.5*v,30+3*v).lineTo(40,20-3*v).lineTo(50+1.5*v,30+3*v).lineTo(40,100+5*v).lineTo(30-1.5*v,30+3*v);
 			}
 		/*
@@ -123,7 +125,8 @@
 
 
 <body onLoad="init();">
-	<canvas id="raincan" width="800" height="300"></canvas>
+	<canvas id="raincan" width="800" height="300" 
+	style="background-color:#000"></canvas>
 </body>
 
 </html>
