@@ -1,4 +1,4 @@
-#Devops| Ex2.py
+#Devops| Exercise 2 code
 #Jesson Go
 
 #this code assumes a python interpreter is available on the system
@@ -43,34 +43,36 @@ if 'Windows' in platform.system():
 
     stat = MEMORYSTAT()
     #call GlobalMemoryStatusEx from Windows to store memory info
+    #into stat attributes
     ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(stat))
 
     #access system stats from the stored list data
     tsm = stat.ullTotalPhys / 1024
     tsmAV = stat.ullAvailPhys / 1024
-    #tsmIUA = tsm - tsmAV
-    #memory load is a percentage
+    
+    #memory load is a percentage of memory in use
+    #out of the total system memory
     tsmMemLo = stat.dwMemoryLoad
     tsmIU = tsmMemLo * tsm / 100
-    print(tsmMemLo)
+    #print(tsmMemLo)
 
 #if Linux is detected
 elif 'Linux' in platform.system():
     #read out of /proc/meminfo
     meminfo = dict((i.split()[0].rstrip(':'),int(i.split()[1])) for i in open('/proc/meminfo').readlines())
     #total system memory
-    tsm = meminfo['MemTotal']
+    tsm = int(meminfo['MemTotal'])
     
     tsmFr = int(meminfo['MemFree'])
     tsmCa = int(meminfo['Cached'])
-    tsmBu = int(meminfo['Buffers'])
+    #tsmBu = int(meminfo['Buffers'])
     
-    #total memory in use, accounting for Cache and Buffers
-    #MemTotal + Buffers + Cached - (MemFree + Cached) = Actual Used
-    #MemTotal + Buffers + - MemFree = Actual Used
-    tsmIU = int(tsm) + tsmBu + - tsmFr
+    #total memory in use, accounting for Cache and Bu
+    #Actual used = Total - MemFree - Cached
+    tsmIU = tsm - tsmFr - tsmCa
 
-    #total available memory, Memfree is the actual available minus cached
+    #total available memory, Memfree is not actual available
+    #but the actual available minus cached
     #actual available = meminfo['MemFree'] + meminfo['Cached']
     tsmAV = tsmFr + tsmCa
     
@@ -88,7 +90,7 @@ print("Total system memory in use: %d kB" % tsmIU)
 #output 1-3 in .txt file
 outhand = open("Memout.txt", "w")
 #outhand.write("Total System Memory: %s \nTotal System Memory in Use: %s \nTotal System Memory Available: %s" % (tsm, tsmIU, tsmAV))
-outhand.write("Total System Memory: %s bytes \n" % tsm)
-outhand.write("Total System Memory in use: %s bytes \n" % tsmIU)
-outhand.write("Total System Memory available: %s bytes \n" % tsmAV)
+outhand.write("Total System Memory: %s kB \n" % tsm)
+outhand.write("Total System Memory in use: %s kB \n" % tsmIU)
+outhand.write("Total System Memory available: %s kB \n" % tsmAV)
 outhand.close()
