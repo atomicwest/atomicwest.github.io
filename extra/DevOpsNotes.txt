@@ -1,0 +1,7 @@
+tested code on Debian, version 8 (Jessie)
+
+/usr/tstmem.py
+
+difference in printed memory to meminfo list is 0.281%
+
+tested on Windows 7 and compared to resmon status
