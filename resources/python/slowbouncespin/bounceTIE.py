@@ -30,7 +30,7 @@ def load_image(file):
 loadicon = load_image('tieicon.gif')
 icon = pygame.transform.scale(loadicon, (32,32))
 pygame.display.set_icon(icon)
-pygame.display.set_caption("Bouncy TIE")
+pygame.display.set_caption("Slow Bouncy TIE")
 pygame.mouse.set_visible(0)
 
 count = 1
@@ -40,7 +40,10 @@ while 1:
         #if event.type in (pygame.QUIT, pygame.KEYDOWN) : sys.exit()
 		if not hasattr(event, 'key'): continue
 		down = event.type == KEYDOWN
-		if event.key == K_ESCAPE: sys.exit(0)
+		if event.key == K_ESCAPE: 
+			pygame.display.quit()
+			pygame.quit()
+			sys.exit(0)
                 	
         #move method determines location on screen
 	tierect = tierect.move(speed)
