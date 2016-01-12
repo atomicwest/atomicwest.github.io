@@ -1,0 +1,11 @@
+Working Title: Cat and Mouse
+
+2 player game, where each player is allied with opposing factions; one controlling the mech and another controlling the air unit. (A more nuanced story can be fleshed out later)
+
+The idea is that the mech has the noticeable disadvantage; the air unit has greater speed/coverage and degrees of movement. However, the mech utilizes the cover of the abandoned outpost map to wear out the air unit. The map has features such as anti-air turrets and false ID signature jammers to mislead the air unit's scanners.
+
+The air unit is constrained by such things as fuel resources, and must land at designated fuel ports if flying for too long. In these moments, the mech can launch a sneak attack.
+
+And so the cat and mouse game is summed up by two units trying to destroy each other but using their inherent abilities, the terrain, and power-ups to leverage their weaknesses.
+
+Although mostly for combat between these two vehicle units, potential future additions can be pilots who can depart the vehicle and attack on foot. 
