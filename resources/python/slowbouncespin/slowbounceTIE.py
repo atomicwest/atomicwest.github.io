@@ -54,28 +54,8 @@ for n in range(256):
         pygame.display.flip()
 
 time.sleep(3) #hold image
-"""
-#static loading screen
-loadscrn = load_image('TIEloadscrn1.jpg')
-screen = pygame.display.set_mode(loadscrn.get_rect().size)
-loadback = pygame.Surface(loadscrn.get_rect().size)
-loadback.blit(loadscrn,(0,0))
-screen.blit(loadback, (0,0))
-pygame.display.flip()
-time.sleep(5)
-"""
-
-'''
-#transition and update the screen
-screen.fill(black)
-pygame.display.flip()
-
-#fade out
-loadback.set_alpha(128)
-screen.blit(loadback, (0,0))
-pygame.display.flip()
-time.sleep(5)
-'''
+pygame.mixer.music.load('tieshot1.wav')
+pygame.mixer.music.play(0)
 
 """
 #flickering fade
@@ -102,37 +82,39 @@ time.sleep(1)
 count = 1
 
 #create background image
-
+pygame.mixer.music.load('Tie Fighter Attack.mp3')
+pygame.mixer.music.play(-1)
 while 1:
-	for event in pygame.event.get():
+
+        for event in pygame.event.get():
         #if event.type in (pygame.QUIT, pygame.KEYDOWN) : sys.exit()
-		if not hasattr(event, 'key'): continue
-		down = event.type == KEYDOWN
-		if event.key == K_ESCAPE: 
-			pygame.display.quit()
-			pygame.quit()
-			sys.exit(0)
+                if not hasattr(event, 'key'): continue
+                down = event.type == KEYDOWN
+                if event.key == K_ESCAPE:
+                        pygame.display.quit()
+                        pygame.quit()
+                        sys.exit(0)
                 	
         #move method determines location on screen
-	tierect = tierect.move(speed)
+        tierect = tierect.move(speed)
 
         #reverse velocity direction when the image hits the borders
-	if tierect.left < 0 or tierect.right > width:
-		speed[0] = -speed[0]
-	if tierect.top < 0 or tierect.bottom > height:
-		speed[1] = -speed[1]
+        if tierect.left < 0 or tierect.right > width:
+                speed[0] = -speed[0]
+        if tierect.top < 0 or tierect.bottom > height:
+                speed[1] = -speed[1]
 
 	#fill screen with black to erase image
-	screen.fill(black)
+        screen.fill(black)
 
 	#draw image using *surface*.blit() method
 	#blit is the main method for changing onscreen pixels
-	screen.blit(tie, tierect)
+        screen.blit(tie, tierect)
 
 	#update display, since pygame manages display with double buffer
-	pygame.display.flip()
+        pygame.display.flip()
 
 	#update
-	tie = pygame.transform.rotate(tiepre, count * math.pi / 180)
-	tierect = tie.get_rect()
-	count += 1
+        tie = pygame.transform.rotate(tiepre, count * math.pi / 180)
+        tierect = tie.get_rect()
+        count += 1
