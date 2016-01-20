@@ -1,0 +1,55 @@
+/* test css sheet */
+
+
+.sidemenu{
+	float: left;
+	margin: 4px;
+	padding: 10px;
+	width: 100px;
+	height: 300px;
+	border: 1px 
+	
+}
+
+.mainbody{
+	float: right;
+	margin: 22px;
+	padding: 12px;
+}
+
+.media {
+
+}
+
+#roundcorn_side {
+	border-radius: 17px;
+	border: 12px solid #e5ffff;
+	background: #e5faff;
+}
+
+
+p{
+	font-family: Verdana, Geneva, sans-serif;
+	color: #000066;
+	font-size: 10px;
+}
+
+h1, h3 {
+	background-color:hsla(240, 74%, 46%, 0.3);
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+}
+
+h2{
+
+}
+
+p {
+	font-family: Verdana, Geneva, sans-serif;
+	color: 
+	bor
+}
+
+body{
+
+}
