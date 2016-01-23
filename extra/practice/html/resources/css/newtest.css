@@ -1,0 +1,90 @@
+.banner {
+	position: absolute;
+	left:0; 
+	right:0;
+	height: 100px;
+	padding: 15px;
+	background-image: url("hoff_unwear.PNG");
+}
+
+.side{
+	position: absolute;
+	left: 0; 
+	top: 100px; 
+	bottom: 0;
+	width: 200px;
+	padding: 15px;
+}
+
+.body{
+	position: absolute;
+	left: 200px;
+	top: 100px;
+	right: 0;
+	bottom: 0;
+	padding: 15px;
+}
+
+
+.container{
+	width: 100%
+}
+
+.container .outer {
+	width: 100%;
+	padding-top: 75%;
+	position: relative;
+}
+
+.container .outer .inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#container1 {
+	border-radius: 22px;
+	border: 2px solid #ccddff;
+	background: #00081a;
+}
+
+#container2 {
+	border-radius: 2px;
+	border: 2px solid #b3ccff;
+	background: #001133;
+}
+
+a:link {
+	text-decoration: none;
+	color: #e5eeff;
+	/* background-color: #003366; */
+	padding: 12px 14px;
+	text-align: center;
+	display: inline-block;
+	font-size: 12px;
+}
+
+a:hover, a:active{
+	color: #4dffff;
+}
+
+div{
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
+	color: #e5f2ff;
+	overflow: hidden;
+}
+
+ul{
+	overflow: hidden;
+}
+
+p {
+	padding: 10px;
+}
+
+h1 {
+	padding: 10px;
+}
