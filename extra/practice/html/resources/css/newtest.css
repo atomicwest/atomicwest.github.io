@@ -88,3 +88,8 @@ p {
 h1 {
 	padding: 10px;
 }
+
+html, body {
+	height: 100%;
+	display: flex;
+}
