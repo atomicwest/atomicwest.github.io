@@ -1,0 +1,48 @@
+/*
+css style sheet
+*/
+
+body {
+	font-family: Verdana;
+	font-size: 12px;
+	color: #e5eeff;
+	
+}
+
+.container:before,
+.container:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+.container {
+	background: #e5f7ff;
+	width: 640;
+	*	: 1; 
+	font: #b36b00;
+	
+}
+.container,
+section,
+aside {
+	border-radius: 3px;
+}
+section,
+aside {
+	background: #80e5ff;
+	margin: 7px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+section {
+	float: left;
+	width 480px;
+}
+
+aside {
+	float: right;
+	width: 240px;
+}

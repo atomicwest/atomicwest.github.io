@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta charset="utf-8" />
+
+<link type="text/css" rel="stylesheet" href="resources/css/mainLayout.css">
+<title>J. Go - Recent Graduate </title>
+<link rel="shortcut icon" href="resources/images/avatar.png">
+
+<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+
+<body onLoad="init();" background="resources/images/swirlback.PNG">
+
+	<div class="banner">
+		<h1>J. Go - Developer and Designer</h1>
+
+	</div>
+	
+	<div class="container">
+		<div class="outer">
+			<div class="inner">
+				
+				<div class="side">
+					<div align="center" id="container2">
+						<a class="sideL" href="index.html"> Home </a><br>
+						<a class="sideL" href="resumeJG.html"> Resumé </a><br>
+						<a class="sideL" href="currprojects.html"> Current Projects </a><br>
+						<a class="sideL" href="courseprojects.html"> Course Projects </a><br>
+						<a class="sideL" href="pastprojects.html"> Past Projects </a><br>
+						<a class="sideL" href="about.html"> About </a><br>
+						<a class="sideL" href="contactPHP.html"> Contact </a><br>
+						<br>
+						<hr>
+						<script src="resources/js/neorain.js"></script>
+						<canvas id="raincan" width="140" height="300" style="background-color:#000"></canvas>
+						<br>
+					</div>
+				</div>
+				
+				<div class="body">
+					<div id="container1">
+						<h2> Course Projects </h2>
+						
+						<p> Here are some of my old course projects from my university career:</p>
+						
+						<p><u> Master's Practicum: IoT Infant Monitor</u><br></p>
+						<p>Our group wanted to add an extra level of connectivity to commercially-available baby monitors, 
+						specifically for addressing Sudden Infant Death Syndrome (SIDS) and alerting to parents when 
+						breathing has stopped. After interviewing parents, one issue that came up was the abrupt nature of 
+						monitor alarms that might occur for false readings. We wanted to utilize mobile technology to 
+						enable the parent to receive alerts, for example, even if the parent were outside in the yard 
+						while the baby was napping indoors. We produced a prototype that sent SMS text alerts (via the Twilio API) to parents' 
+						phones when detected breathing dropped for about 20 seconds. 
+						<br>
+						<center>
+						<img src="resources/images/courseproject/mockcrib.png" alt=" " style="width: 30%;max-height: 100%"/>
+						<img src="resources/images/courseproject/mothergoose1.png" alt=" " style="width: 30%;max-height: 100%"/>
+						<img src="resources/images/courseproject/mgRPIscrn.png" alt=" " style="width: 30%;max-height: 100%"/>
+						</center>
+						<br>
+						If a parent wanted to see their child's breathing rate in real-time, I created a simple webpage 
+						<b><a href="http://mgscrum.blogspot.com/" target="_blank">(a blogspot page at the time) </a></b> integrated with Plotly that 
+						graphed our physical sensor data. 
+						<br><br>
+						<center>
+						<a   href="http://mgscrum.blogspot.com/" target="_blank"><img src="resources/images/courseproject/monitorstream.png" alt=" " style="width: 50%; max-height: 30%"/></a>
+						</center>
+						<br><br>
+						Ideally, a single, fully developed app would be responsible for 
+						receiving alerts and displaying breathing data, but our time constraints limited us to separate 
+						native SMS and web page data display. <br>
+						<br>
+						<center><img src="resources/images/courseproject/rpi_only.png" alt=" " style="width: 50%; max-height: 30%"/>
+						<img src="resources/images/courseproject/rpi1.png" alt=" " style="width: 50%; max-height: 30%"/>
+						</center>
+						</p>
+						<br><br><br><br>
+						<hr>
+						
+						<p><u> Volunteer Manager App</u><br></p>
+						<p>I worked with after-school K-12 programs in San Francisco and Oakland as an undergrad, while also interacting with different groups on campus. One potentially troublesome thing that occurred 
+						everyday was tracking attendance, especially for those who were participating for credit over the 
+						course of the semester. The idea behind the Volunteer Manager is to have an easy way to track 
+						attendance in addition to other aspects of the daily schedule, such as organizing transportation 
+						to and from volunteer sites. <br><br>
+						
+						<center><img src="resources/images/courseproject/volunteer0.png"  alt=" " style="width: 30%;max-height: 100%" />
+						<img src="resources/images/courseproject/volunteer1.png"  alt=" " style="width: 30%;max-height: 100%" />
+						</center>
+						
+						<br>
+						Furthermore, organizations will have the flexibility of shaping the 
+						app to meet their specific needs, such as if volunteers are required to fill out progress sheets 
+						for one-on-one tutoring.</p><br>
+						<hr>
+						<p><u>Landscape Evolution Simulations in MATLAB</u></p><br>
+						
+						<p> Utilizing second-order time-dependent partial differential equations and recursive formulas,
+						an erosion scenario featuring visualization of such processes as rilling is shown below in an 
+						arbitrarily determined portion of earth.
+						<br><br>
+						<img src="resources/images/part2.gif" alt=" " style="width: 100%;max-height: 100%" />
+						<br><br><br>
+						PDEs again play apart in the following simulation that features a standing wave enclosed in a predetermined
+						two-dimensional grid.<br><br>
+						<img src="resources/images/final_wave_1.gif" alt=" " style="width: 100%;max-height: 100%" /> 
+						<hr>
+						<p><u>GIS Distribution of Argia vivida in California</u><br>
+						<p> A research project I did as an undergraduate allowed me to analyze mountains of dead damselflies 
+						and the geodata associated with each specimen. Filtering out for certain repeat locations, I used ArcGIS to produce
+						a historical distribution of the species across the state.<br> <br>
+						<center><img src="resources/images/argiadist.png"alt=" " style="width: 50%;max-height: 50%" /> <br> </p></center>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="disclaimer">
+		<p style="text-align: center; padding: 0px">&#169;Copyright - J. Go, 2016</p>
+	</div>
+</body>
+</html>
