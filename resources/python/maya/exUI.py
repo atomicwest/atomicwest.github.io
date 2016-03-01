@@ -1,3 +1,5 @@
+#from http://kevman3d.blogspot.com/2015/05/introduction-to-simple-maya-ui-coding.html
+
 import maya.cmds as cmds
 
 #UIs work as hierarchies
