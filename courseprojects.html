@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 
 <link type="text/css" rel="stylesheet" href="resources/css/mainLayout.css">
-<title>J. Go - Recent Graduate </title>
+<title>J. Go - Course Projects </title>
 <link rel="shortcut icon" href="resources/images/avatar.png">
 
 <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
@@ -14,15 +14,14 @@
 
 <body onLoad="init();" background="resources/images/swirlback.jpg">
 
-	<div class="banner">
-		<h1>J. Go - Developer and Designer</h1>
+	<section class="banner" id="bodyContainer">
+		<h1>J. Go - Emerging Developer and Designer</h1>
+	</section>
 
-	</div>
-	
 	<div class="container">
 		<div class="outer">
 			<div class="inner">
-				
+
 				<div class="side">
 					<div align="center" id="container2">
 						<a class="sideL" href="index.html"> Home </a><br>
@@ -39,124 +38,134 @@
 						<br>
 					</div>
 				</div>
-				
-				<div class="body">
-					<div id="container1">
-						<h2> Course Projects </h2>
-						
-						<p> Here are some of my old course projects from my university career:</p>
-						
-						<p id="prac"><u> Master's Practicum: IoT Infant Monitor</u><br></p>
-						<p>Our group wanted to add an extra level of connectivity to commercially-available baby monitors, 
-						specifically for addressing Sudden Infant Death Syndrome (SIDS) and alerting to parents when 
-						breathing has stopped. After interviewing parents, one issue that came up was the abrupt nature of 
-						monitor alarms that might occur for false readings. We wanted to utilize mobile technology to 
-						enable the parent to receive alerts, for example, even if the parent were outside in the yard 
-						while the baby was napping indoors. We produced a prototype that sent SMS text alerts (via the Twilio API) to parents' 
-						phones when detected breathing dropped for about 20 seconds. 
-						<br>
-						<center>
-						<img src="resources/images/courseproject/mockcrib.png" alt=" " style="width: 30%;max-height: 100%"/>
-						<img src="resources/images/courseproject/mothergoose1.png" alt=" " style="width: 30%;max-height: 100%"/>
-						<img src="resources/images/courseproject/mgRPIscrn.png" alt=" " style="width: 30%;max-height: 100%"/>
-						</center>
-						<br>
-						If a parent wanted to see their child's breathing rate in real-time, I created a simple webpage 
-						<b><a href="http://mgscrum.blogspot.com/" target="_blank">(a blogspot page at the time) </a></b> integrated with Plotly that 
-						graphed our physical sensor data. 
-						<br><br>
-						<center>
-						<a   href="http://mgscrum.blogspot.com/" target="_blank"><img src="resources/images/courseproject/monitorstream.png" alt=" " style="width: 50%; max-height: 30%"/></a>
-						</center>
-						<br><br>
-						Ideally, a single, fully developed app would be responsible for 
-						receiving alerts and displaying breathing data, but our time constraints limited us to separate 
-						native SMS and web page data display. <br>
-						<br>
-						<center><img src="resources/images/courseproject/rpi_only.png" alt=" " style="width: 50%; max-height: 30%"/>
-						<img src="resources/images/courseproject/rpi1.png" alt=" " style="width: 50%; max-height: 30%"/>
-						</center>
-						
-						<br><br>
-						The blog page contents have been reproduced here for your convenience:
-						<br><br>
-						<div style="text-align: center;">
-						------------------------------------------------------------------------------------------------------------------------</div>
-						
-						<div style="text-align: center;">
-						<br /></div>
-						<div style="text-align: center;">
-						<span style="font-family: Verdana,sans-serif;"><b>Real-Time Graph</b></span><br />
-						<a href="https://plot.ly/~atomicwest/59/" style="display: block; text-align: center;" target="_blank" title="Breathing Monitor"><img alt="Breathing Monitor" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" src="https://plot.ly/~atomicwest/59.png" style="max-width: 50%;" /></a>
-						    <script async="" data-plotly="atomicwest:59" src="https://plot.ly/embed.js"></script>
-						</div>
-						<div style="text-align: center;">
-						------------------------------------------------------------------------------------------------------------------------</div>
-						<div style="text-align: center;">
-						<br /></div>
-						<div style="text-align: center;">
-						<span style="font-family: Verdana,sans-serif;"><b>Video Stream</b></span><br />
-						<br />
-						
-						
-						<iframe width="420" height="315" src="https://www.youtube.com/embed/m4Mz_3sbH6I" frameborder="0" allowfullscreen></iframe>
-						<br><br><br>
-						<iframe width="420" height="315" src="https://www.youtube.com/embed/-ig_SJnCLMo" frameborder="0" allowfullscreen></iframe>
-						<br><br>
-						<div class="separator" style="clear: both; text-align: center;">
-						<a href="http://1.bp.blogspot.com/-9wsNI7Gh1ZM/VUA38Qu8a8I/AAAAAAAAAAo/2kRvNnU9bYg/s1600/testimg.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-9wsNI7Gh1ZM/VUA38Qu8a8I/AAAAAAAAAAo/2kRvNnU9bYg/s1600/testimg.jpg" height="240" width="320" /></a></div>
-						<br />
-						<br />
 
-						</div>
-						
-						</p>
-						<br><br>
+				<div class="body">
+					<div id="bodyContainer">
+						<h2> Course Projects </h2>
+
+						<p> Here are some of my old course projects from my university career:</p>
+
+						<section id="MSProject">
+							<p id="prac"><u> Master's Practicum: IoT Infant Monitor</u><br></p>
+							<p>Our group wanted to add an extra level of connectivity to commercially-available baby monitors,
+							specifically for addressing Sudden Infant Death Syndrome (SIDS) and alerting to parents when
+							breathing has stopped. After interviewing parents, one issue that came up was the abrupt nature of
+							monitor alarms that might occur for false readings. We wanted to utilize mobile technology to
+							enable the parent to receive alerts, for example, even if the parent were outside in the yard
+							while the baby was napping indoors. We produced a prototype that sent SMS text alerts (via the Twilio API) to parents'
+							phones when detected breathing dropped for about 20 seconds.
+							<br>
+							<center>
+							<img src="resources/images/courseproject/mockcrib.png" alt=" " style="width: 30%;max-height: 100%"/>
+							<img src="resources/images/courseproject/mothergoose1.png" alt=" " style="width: 30%;max-height: 100%"/>
+							<img src="resources/images/courseproject/mgRPIscrn.png" alt=" " style="width: 30%;max-height: 100%"/>
+							</center>
+							<br>
+							If a parent wanted to see their child's breathing rate in real-time, I created a simple webpage
+							<strong><a href="http://mgscrum.blogspot.com/" target="_blank">(a blogspot page at the time) </a></strong> integrated with Plotly that
+							graphed our physical sensor data.
+							<br><br>
+							<center>
+							<a   href="http://mgscrum.blogspot.com/" target="_blank"><img src="resources/images/courseproject/monitorstream.png" alt=" " style="width: 50%; max-height: 30%"/></a>
+							</center>
+							<br><br>
+							Ideally, a single, fully developed app would be responsible for
+							receiving alerts and displaying breathing data, but our time constraints limited us to separate
+							native SMS and web page data display. <br>
+							<br>
+							<center><img src="resources/images/courseproject/rpi_only.png" alt=" " style="width: 50%; max-height: 30%"/>
+							<img src="resources/images/courseproject/rpi1.png" alt=" " style="width: 50%; max-height: 30%"/>
+							</center>
+
+							<br><br>
+							The blog page contents have been reproduced here for your convenience:
+							<br><br>
+							<div style="text-align: center;">
+							------------------------------------------------------------------------------------------------------------------------</div>
+
+							<div style="text-align: center;">
+							<br /></div>
+							<div style="text-align: center;">
+							<span style="font-family: Verdana,sans-serif;"><strong>Real-Time Graph</strong></span><br />
+							<a href="https://plot.ly/~atomicwest/59/" style="display: block; text-align: center;" target="_blank" title="Breathing Monitor"><img alt="Breathing Monitor" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" src="https://plot.ly/~atomicwest/59.png" style="max-width: 50%;" /></a>
+							    <script async="" data-plotly="atomicwest:59" src="https://plot.ly/embed.js"></script>
+							</div>
+							<div style="text-align: center;">
+							------------------------------------------------------------------------------------------------------------------------</div>
+							<div style="text-align: center;">
+							<br /></div>
+							<div style="text-align: center;">
+							<span style="font-family: Verdana,sans-serif;"><strong>Video Stream</strong></span><br />
+							<br />
+
+
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/m4Mz_3sbH6I" frameborder="0" allowfullscreen></iframe>
+							<br><br><br>
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/-ig_SJnCLMo" frameborder="0" allowfullscreen></iframe>
+							<br><br>
+							<div class="separator" style="clear: both; text-align: center;">
+							<a href="http://1.bp.blogspot.com/-9wsNI7Gh1ZM/VUA38Qu8a8I/AAAAAAAAAAo/2kRvNnU9bYg/s1600/testimg.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-9wsNI7Gh1ZM/VUA38Qu8a8I/AAAAAAAAAAo/2kRvNnU9bYg/s1600/testimg.jpg" height="240" width="320" /></a></div>
+							<br />
+							<br />
+
+							</div>
+
+							</p>
+						</section>
+
 						<br><br>
 						<hr>
-						
-						<p id="vma"><u> Volunteer Manager App</u><br></p>
-						<p>I worked with after-school K-12 programs in San Francisco and Oakland as an undergrad, while also interacting with different groups on campus. One potentially troublesome thing that occurred 
-						everyday was tracking attendance, especially for those who were participating for credit over the 
-						course of the semester. The idea behind the Volunteer Manager is to have an easy way to track 
-						attendance in addition to other aspects of the daily schedule, such as organizing transportation 
-						to and from volunteer sites. <br><br>
-						
-						<center><img src="resources/images/courseproject/volunteer0.png"  alt=" " style="width: 30%;max-height: 100%" />
-						<img src="resources/images/courseproject/volunteer1.png"  alt=" " style="width: 30%;max-height: 100%" />
-						</center>
-						
-						<br>
-						Furthermore, organizations will have the flexibility of shaping the 
-						app to meet their specific needs, such as if volunteers are required to fill out progress sheets 
-						for one-on-one tutoring.</p><br>
-						<hr>
-						<p id="eesmat"><u>Landscape Evolution Simulations in MATLAB</u></p><br>
-						
-						<p> Utilizing second-order time-dependent partial differential equations and recursive formulas,
-						an erosion scenario featuring visualization of such processes as rilling is shown below in an 
-						arbitrarily determined portion of earth.
-						<br><br>
-						<img src="resources/images/part2.gif" alt=" " style="width: 100%;max-height: 100%" />
-						<br><br><br>
-						PDEs again play apart in the following simulation that features a standing wave enclosed in a predetermined
-						two-dimensional grid.<br><br>
-						<img src="resources/images/final_wave_1.gif" alt=" " style="width: 100%;max-height: 100%" /> 
-						<hr>
-						<p><u>GIS Distribution of Argia vivida in California</u><br>
-						<p> A research project I did as an undergraduate allowed me to analyze mountains of dead damselflies 
-						and the geodata associated with each specimen. Filtering out for certain repeat locations, I used ArcGIS to produce
-						a historical distribution of the species across the state.<br> <br>
-						<center><img src="resources/images/argiadist.png"alt=" " style="width: 50%;max-height: 50%" /> <br> </p></center>
-						
+
+						<section id="vma">
+							<p><u> Volunteer Manager App</u><br></p>
+							<p>I worked with after-school K-12 programs in San Francisco and Oakland as an undergrad, while also interacting with different groups on campus. One potentially troublesome thing that occurred
+							everyday was tracking attendance, especially for those who were participating for credit over the
+							course of the semester. The idea behind the Volunteer Manager is to have an easy way to track
+							attendance in addition to other aspects of the daily schedule, such as organizing transportation
+							to and from volunteer sites. <br><br>
+
+							<center><img src="resources/images/courseproject/volunteer0.png"  alt=" " style="width: 30%;max-height: 100%" />
+							<img src="resources/images/courseproject/volunteer1.png"  alt=" " style="width: 30%;max-height: 100%" />
+							</center>
+
+							<br>
+							Furthermore, organizations will have the flexibility of shaping the
+							app to meet their specific needs, such as if volunteers are required to fill out progress sheets
+							for one-on-one tutoring.</p><br>
+							<hr>
+						</section>
+
+						<section id="eesmat">
+							<p><u>Landscape Evolution Simulations in MATLAB</u></p><br>
+
+							<p> Utilizing second-order time-dependent partial differential equations and recursive formulas,
+							an erosion scenario featuring visualization of such processes as rilling is shown below in an
+							arbitrarily determined portion of earth.
+							<br><br>
+							<img src="resources/images/part2.gif" alt=" " style="width: 100%;max-height: 100%" />
+							<br><br><br>
+							PDEs again play apart in the following simulation that features a standing wave enclosed in a predetermined
+							two-dimensional grid.<br><br>
+							<img src="resources/images/final_wave_1.gif" alt=" " style="width: 100%;max-height: 100%" />
+							<hr>
+						</section>
+
+						<section id="GIS">
+							<p><u>GIS Distribution of Argia vivida in California</u><br>
+							<p> A research project I did as an undergraduate allowed me to analyze mountains of dead damselflies
+							and the geodata associated with each specimen. Filtering out for certain repeat locations, I used ArcGIS to produce
+							a historical distribution of the species across the state.<br> <br>
+							<center><img src="resources/images/argiadist.png"alt=" " style="width: 50%;max-height: 50%" /> <br> </p></center>
+						</section>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<div class="disclaimer">
+
+	<footer class="disclaimer" id="bodyContainer">
 		<p style="text-align: center; padding: 0px">&#169;Copyright - J. Go, 2016</p>
-	</div>
+	</footer>
 </body>
 </html>

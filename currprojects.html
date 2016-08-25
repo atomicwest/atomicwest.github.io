@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 
 <link type="text/css" rel="stylesheet" href="resources/css/mainLayout.css">
-<title>J. Go - Recent Graduate </title>
+<title>J. Go - Current Projects </title>
 <link rel="shortcut icon" href="resources/images/avatar.png">
 
 <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
@@ -14,15 +14,14 @@
 
 <body onLoad="init();" background="resources/images/swirlback.jpg">
 
-	<div class="banner">
-		<h1>J. Go - Developer and Designer</h1>
+	<section class="banner" id="bodyContainer">
+		<h1>J. Go - Emerging Developer and Designer</h1>
+	</section>
 
-	</div>
-	
 	<div class="container">
 		<div class="outer">
 			<div class="inner">
-				
+
 				<div class="side">
 					<div align="center" id="container2">
 						<a class="sideL" href="index.html"> Home </a><br>
@@ -39,85 +38,91 @@
 						<br>
 					</div>
 				</div>
-				
+
 				<div class="body">
-					<div id="container1">
+					<div id="bodyContainer">
 						<h2> Current Projects </h2>
+
+						<section id="pygameTFA">
+							<p><u> First Person Kylo Ren </u><br></p>
+							<p align="justify"> With The Force Awakens in theatres, I wanted to do some projects that
+							used some design aspects from the film. This FPS with Kylo Ren's crossguard lightsaber is the
+							first of a few projects that take inspiration from TFA.
+							<center>
+								<img src="resources/images/crprojects/pygameTFA/initmain.png" alt=" " style="width: 25%;max-height: 25%"/>
+								<img src="resources/images/crprojects/pygameTFA/tfafakelogo3.png" alt=" " style="width: 25%;max-height: 25%"/>
+								<img src="resources/images/crprojects/pygameTFA/screenshot1.png" alt=" " style="width: 25%;max-height: 25%"/>
+							</center>
+							I used Maya to make a crossguard saber
+							and glove model, rigging the glove with a basic hand skeleton and animating two different attacks.
+							I utilized a Wolfenstein build found <strong><a href="https://github.com/mlambir/Pygame-FPS/tree/master/src" target="blank"> here</a></strong>.
+							<center>
+							<img src="resources/images/crprojects/pygameTFA/LSqdown(1).png" alt=" " style="width: 15%;max-height: 15%"/>
+							<img src="resources/images/crprojects/pygameTFA/LSqdown(2).png" alt=" " style="width: 15%;max-height: 15%"/>
+							<img src="resources/images/crprojects/pygameTFA/LSqdown(3).png" alt=" " style="width: 15%;max-height: 15%"/>
+							<img src="resources/images/crprojects/pygameTFA/LSqdown(4).png" alt=" " style="width: 15%;max-height: 15%"/>
+							<br>
+							<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite542.png" alt=" " style="width: 15%;max-height: 15%"/>
+							<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite543.png" alt=" " style="width: 15%;max-height: 15%"/>
+							<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite544.png" alt=" " style="width: 15%;max-height: 15%"/>
+							<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite546.png" alt=" " style="width: 15%;max-height: 15%"/>
+							<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite547.png" alt=" " style="width: 15%;max-height: 15%"/>
+							<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite548.png" alt=" " style="width: 15%;max-height: 15%"/>
+							</center>
+							<p>Most of my changes were with the opening loading screens with such functions as the image load
+							and fade in/out, as well as the secondary attack function. Also, most obviously, I either made all
+							of the assets (the saber, the X Wing/TIE models in the intro) or scoured the web (sounds, textures, etc).
+
+							There's plenty of work to be done (making more interactive enemies, complex level design...)
+							especially since I would like this project to work more smoothly on the Raspberry Pi (I'm still
+							using the B+, maybe I'll get a Pi 2 B+ at some point). Some simple solutions might be creating a
+							single spritesheet instead of iterating through and loading different frames.<p>
+						</section>
+
+						<section id="TFA3D">
+							<p><u>Resistance X-Wing </u></p>
+							<p><br>
+							<center>
+							<img src="resources/images/crprojects/xwing/TIEloadscrn1.jpg" alt=" " style="width: 75%;max-height: 75%"/>
+							</center>
+							There's already a mod out there for Battlefront 2 that incorporates stormtroopers, XWings, and even Kylo Ren
+							from TFA, but I hope to make some kind of Unity3D game that brings new game mechanics to the table.
+							I have a long way to go with this one.
+
+							<p> <a href="resources/images/crprojects/xwing/xwingTFAdesert25fps.mov" style="width: 15%;max-height: 15%"> </a> </p>
+							<embed src="resources/images/crprojects/xwing/xwingTFAdesert25fps.mov" width=960 height=540 autoplay=false controller=true loop=false pluginspage="http://wwww.apple.com/quicktime/">
+							</p>
+						</section>
+
+						<section id="AEfilter">
+							<p><u>After Effects, OpenGL, and New Plugins </u></p>
+							<p>
+							Blockbuster movies tend to have elaborate scenes that blend live-action footage with CGI; the feat itself is
+							impressive, and I'd love to professionally contribute to that process someday. However, I'm interested in
+							bringing those two levels closer together: there's the live-action layer that the audience can easily accept as "real",
+							but that perception of "real" is at odds with the CG layer, whether because of the models, textures, animation, compositing, etc.
+
+							My goal with this project is to create an image processing plugin, script, and/or algorithm that
+							identifies "bare minimum" edges from, say, a live-action layer and a CG layer, and also reduces the textures to the same amount of detail.
+							For those familiar with Photoshop, what I have in mind is kind of like the cutout and find edges filters put together.
+
+							If I can get texture control over the edges, I envision an anime-ish look to whatever video layer the plugin is applied to.
+							As I progress with this project, I hope to publish some development images to show some examples.
+							</p>
+						</section>
 						
-						<p id="pygameTFA"><u> First Person Kylo Ren </u><br></p>
-						<p align="justify"> With The Force Awakens in theatres, I wanted to do some projects that
-						used some design aspects from the film. This FPS with Kylo Ren's crossguard lightsaber is the
-						first of a few projects that take inspiration from TFA. 
-						<center>
-							<img src="resources/images/crprojects/pygameTFA/initmain.png" alt=" " style="width: 25%;max-height: 25%"/>
-							<img src="resources/images/crprojects/pygameTFA/tfafakelogo3.png" alt=" " style="width: 25%;max-height: 25%"/>
-							<img src="resources/images/crprojects/pygameTFA/screenshot1.png" alt=" " style="width: 25%;max-height: 25%"/>
-						</center>
-						I used Maya to make a crossguard saber
-						and glove model, rigging the glove with a basic hand skeleton and animating two different attacks.
-						I utilized a Wolfenstein build found <b><a href="https://github.com/mlambir/Pygame-FPS/tree/master/src" target="blank"> here</a></b>.
-						<center>
-						<img src="resources/images/crprojects/pygameTFA/LSqdown(1).png" alt=" " style="width: 15%;max-height: 15%"/>
-						<img src="resources/images/crprojects/pygameTFA/LSqdown(2).png" alt=" " style="width: 15%;max-height: 15%"/>
-						<img src="resources/images/crprojects/pygameTFA/LSqdown(3).png" alt=" " style="width: 15%;max-height: 15%"/>
-						<img src="resources/images/crprojects/pygameTFA/LSqdown(4).png" alt=" " style="width: 15%;max-height: 15%"/>
 						<br>
-						<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite542.png" alt=" " style="width: 15%;max-height: 15%"/>
-						<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite543.png" alt=" " style="width: 15%;max-height: 15%"/>
-						<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite544.png" alt=" " style="width: 15%;max-height: 15%"/>
-						<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite546.png" alt=" " style="width: 15%;max-height: 15%"/>
-						<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite547.png" alt=" " style="width: 15%;max-height: 15%"/>
-						<img src="resources/images/crprojects/pygameTFA/crossguardLSsprite548.png" alt=" " style="width: 15%;max-height: 15%"/>
-						</center>
-						<p>Most of my changes were with the opening loading screens with such functions as the image load
-						and fade in/out, as well as the secondary attack function. Also, most obviously, I either made all
-						of the assets (the saber, the X Wing/TIE models in the intro) or scoured the web (sounds, textures, etc).
-						
-						There's plenty of work to be done (making more interactive enemies, complex level design...) 
-						especially since I would like this project to work more smoothly on the Raspberry Pi (I'm still 
-						using the B+, maybe I'll get a Pi 2 B+ at some point). Some simple solutions might be creating a 
-						single spritesheet instead of iterating through and loading different frames.<p>
-						
-						<p id="TFA3D"> <u>Resistance X-Wing </u></p>
-						<p><br>
-						<center>
-						<img src="resources/images/crprojects/xwing/TIEloadscrn1.jpg" alt=" " style="width: 75%;max-height: 75%"/>
-						</center>
-						There's already a mod out there for Battlefront 2 that incorporates stormtroopers, XWings, and even Kylo Ren
-						from TFA, but I hope to make some kind of Unity3D game that brings new game mechanics to the table. 
-						I have a long way to go with this one. 
-						
-						<p> <a href="resources/images/crprojects/xwing/xwingTFAdesert25fps.mov" style="width: 15%;max-height: 15%"> </a> </p>
-						<embed src="resources/images/crprojects/xwing/xwingTFAdesert25fps.mov" width=960 height=540 autoplay=false controller=true loop=false pluginspage=http://wwww.apple.com/quicktime/">
-						</p>
-						
-						<p id="AEfilter"><u>After Effects, OpenGL, and New Plugins </u></p>
-						<p>
-						Blockbuster movies tend to have elaborate scenes that blend live-action footage with CGI; the feat itself is
-						impressive, and I'd love to professionally contribute to that process someday. However, I'm interested in 
-						bringing those two levels closer together: there's the live-action layer that the audience can easily accept as "real", 
-						but that perception of "real" is at odds with the CG layer, whether because of the models, textures, animation, compositing, etc.
-						
-						My goal with this project is to create an image processing plugin, script, and/or algorithm that 
-						identifies "bare minimum" edges from, say, a live-action layer and a CG layer, and also reduces the textures to the same amount of detail.
-						For those familiar with Photoshop, what I have in mind is kind of like the cutout and find edges filters put together.
-						
-						If I can get texture control over the edges, I envision an anime-ish look to whatever video layer the plugin is applied to.
-						As I progress with this project, I hope to publish some development images to show some examples.
-						</p>
-						
 						<br>
 						<br>
-						<br>	
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<div class="disclaimer">
+
+	<footer class="disclaimer" id="bodyContainer">
 		<p style="text-align: center; padding: 0px">&#169;Copyright - J. Go, 2016</p>
-	</div>
+	</footer>
 </body>
 </html>
