@@ -7,7 +7,7 @@
 // inval is starting number, sys is the output number system
 function fromDecimal(inval, sys){
 
-  if (! checkBase(inval,sys)) {return 0}
+  // if (! checkBase(inval,sys)) {return 0}
 
   //force default system
   if (sys<=1 || sys==undefined){ sys = 2 }
@@ -34,7 +34,7 @@ function fromDecimal(inval, sys){
 // 2. other base system to decimal
 // orig is the base system of the input inval
 function toDecimal(inval, orig){
-  if (! checkBase(inval,orig)) {return 0}
+  // if (! checkBase(inval,orig)) {return 0}
   //force default system
   if (orig<=1 || orig==undefined){ orig = 2 }
 
@@ -79,6 +79,10 @@ function toOther(){
 
   if (inval==0){
       document.getElementById("result").innerHTML = "0"
+  } else if (! checkBase(inval, orig)) {
+      document.getElementById("result").innerHTML = "Re-enter input number and/or base"
+  } else if (! checkBase(output, outsys)) {
+      document.getElementById("result").innerHTML = "Re-enter output base"
   } else {
       document.getElementById("result").innerHTML = output
   }
