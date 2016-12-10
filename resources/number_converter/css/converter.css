@@ -4,8 +4,43 @@ html {
   background-size: auto auto;
 }
 
+.midbox {
+  vertical-align: middle;
+}
+
+@media only screen and (min-width : 481px) {
+   .flex-row.row {
+  	 display: flex;
+  	 flex-wrap: wrap;
+   }
+   .flex-row.row > [class*='col-'] {
+  	 display: flex;
+  	 flex-direction: column;
+   }
+  .flex-row.row:after, .flex-row.row:before {
+	   display: flex;
+   }
+}
+
+.container {
+  padding-bottom: 50px;
+}
+
 .container,body {
   background: transparent;
+}
+
+.col-lg-3, .col-md-3, .col-sm-6, .col-xs-12 {
+  padding: 10px;
+  border-style: double;
+  border-radius: 10px;
+  border-color: #dbeeff;
+  vertical-align: middle;
+  width: 33%;
+}
+
+.btn-group {
+  vertical-align: middle;
 }
 
 .jumbotron {
@@ -14,6 +49,7 @@ html {
 }
 
 .btn-primary {
+  margin: 2px;
   background-color: #7f61f4;
 }
 
@@ -22,7 +58,7 @@ html {
 }*/
 
 #result {
-  font-size: 30px;
+  /*font-size: 18px;*/
   color: #5d3b99;
 }
 
