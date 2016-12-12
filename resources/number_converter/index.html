@@ -26,46 +26,50 @@
           </p>
         </section>
 
-        <div class="flex-row row">
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <h3>Start</h3>
+
+        <form class="calc" action="index.html" method="post">
+
+          <div class="flex-row row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <h3>Start</h3>
+                  <h4>Number</h4>
+                  <input type="text" class="usrtxt" name="inputnum" id="convfrom" value="0" align="center">
+                  <h4>Base</h4>
+                  <input type="text" class="usrtxt" name="inputbase" id="origbase" value="2" align="center">
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h3>Result</h3>
                 <h4>Number</h4>
-                <input type="text" name="inputnum" id="convfrom" value="0" align="center">
+                <input type="text" class="usrtxt" name="outputnum" id="result" align="center">
                 <h4>Base</h4>
-                <input type="text" name="inputbase" id="origbase" value="2" align="center">
-          </div>
+                <input type="text" class="usrtxt" name="outputbase" id="endbase" value="2" align="center">
+            </div>
 
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <h3>Result</h3>
-              <h4>Number</h4>
-              <input type="text" name="outputnum" id="result" align="center">
-              <h4>Base</h4>
-              <input type="text" name="outputbase" id="endbase" value="2" align="center">
-          </div>
+            <div class="clearfix visible-sm"></div>
 
-          <div class="clearfix visible-sm"></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-right" align="center">
+                  <button type="button" class="btn-primary btn-lg" id="conversion"
+                      onclick="return toOther()" name="convert">Convert</button>
 
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-right" align="center">
-                <button type="button" class="btn-primary btn-lg" id="conversion"
-                    onclick="return toOther()" name="convert">Convert</button>
+                  <button type="button" class="btn-primary btn-lg" id="hex"
+                      onclick="hexprefix()" name="hexp">Add Hex Prefix</button>
 
-                <button type="button" class="btn-primary btn-lg" id="hex"
-                    onclick="hexprefix()" name="hexp">Add Hex Prefix</button>
+                  <button type="button" class="btn-primary btn-lg" id="clearf"
+                      onclick="clearfield()" name="clearf">Clear</button>
 
-                <button type="button" class="btn-primary btn-lg" id="clearf"
-                    onclick="clearfield()" name="clearf">Clear</button>
-
-                <script type="text/javascript">
-                    document.addEventListener("keydown", function(event){
-                        if(event.keyCode == 13){
-                          $("#conversion").click();
+                  <script type="text/javascript">
+                      document.addEventListener("keydown", function(event){
+                          if(event.keyCode == 13){
+                            $("#conversion").click();
+                          }
                         }
-                      }
-                    )
-                </script>
+                      )
+                  </script>
+            </div>
           </div>
+        </form>
 
-        </div>
       </div>
     </div>
 
