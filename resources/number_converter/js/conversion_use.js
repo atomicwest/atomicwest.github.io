@@ -6,8 +6,6 @@
 // 1. decimal to other base system
 // inval is starting number, sys is the output number system
 function fromDecimal(inval, sys){
-  //force default system
-  if (sys<=1 || sys==undefined){ sys = 2 }
 
   var output = ""
   var nextval = parseInt(inval)
@@ -25,6 +23,7 @@ function fromDecimal(inval, sys){
   return output
 
 }
+
 
 //------------------------------------------------------
 // 2. other base system to decimal
@@ -65,6 +64,12 @@ function toOther(){
 
   var output;
 
+  if (! checkBase(inval, orig)) {
+      document.getElementById("result").value = "Invalid input and/or base";
+      document.getElementById("convfrom").focus()
+      return
+  }
+
   var convert;
   if (orig==10){
     output = fromDecimal(inval, outsys);
@@ -75,10 +80,10 @@ function toOther(){
 
   if (inval=="0"){
       document.getElementById("result").value = "0";
-  } else if (! checkBase(inval, orig)) {
-      document.getElementById("result").value = "Re-enter input and/or base";
   } else if (! checkBase(output, outsys)) {
       document.getElementById("result").value = "Re-enter output base";
+      document.getElementById("endbase").focus();
+      return
   } else {
       document.getElementById("result").value = output
   }
