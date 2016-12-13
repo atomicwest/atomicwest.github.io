@@ -67,7 +67,7 @@ html {
   color: #5d3b99;
 }
 
-h2, #desc {
+h2, #desc, #example, #equation {
   text-align: center;
 }
 
