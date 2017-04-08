@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta charset="utf-8" />
+
+<link type="text/css" rel="stylesheet" href="resources/css/mainLayout.css">
+<title>J. Go - Recent Graduate </title>
+<link rel="shortcut icon" href="resources/images/avatar.png">
+
+<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+
+<body onLoad="init();" background="resources/images/swirlback.jpg">
+
+	<section class="banner" id="bodyContainer">
+		<h1>J. Go - Emerging Developer and Designer</h1>
+	</section>
+
+	<div class="container">
+		<div class="outer">
+			<div class="inner">
+
+				<div class="side">
+					<div align="center" id="container2">
+						<a class="sideL" href="index.html"> Home </a><br>
+						<a class="sideL" href="resumeJG.html"> Resumé </a><br>
+						<a class="sideL" href="currprojects.html"> Current Projects </a><br>
+						<a class="sideL" href="courseprojects.html"> Course Projects </a><br>
+						<a class="sideL" href="pastprojects.html"> Past Projects </a><br>
+						<a class="sideL" href="about.html"> About </a><br>
+						<a class="sideL" href="contactPHP.html"> Contact </a><br>
+						<br>
+						<hr>
+						<script src="resources/js/neorain.js"></script>
+						<canvas id="raincan" width="140" height="300" style="background-color:#000"></canvas>
+						<br>
+					</div>
+				</div>
+
+				<div class="body">
+					<div id="bodyContainer">
+						<section id="Intro">
+							<h2> Hello, World </h2>
+
+							<p align="justify"> Thanks for stopping by! I am an engineering graduate trying to find a junior
+							software engineering position or similar opportunities in web development ; I'm currently learning about Rails (see my Github <strong><a href="https://github.com/atomicwest" target="_blank">here</a></strong>),
+							as well as some digital animation on the side in Maya and Blender.
+							Please check out my <strong><a href="about.html">about page</a></strong> for a more detailed description of what I can offer. <br><br>
+							Right now, I'm building experience with, applying knowledge to, and learning more about
+							different aspects of simulation and animation. Some of my current experiments
+							focus on game development/video production projects in Maya; I make sprites for Pygame, models for Unity,
+							and elements for video production. Maya is even flexible enough for exporting .stl 's for 3D printing with
+							software like Solidworks; I hope to write about such work in the future.
+
+							Here are some examples of what I'm working on at the moment:</p>
+							<br>
+						</section>
+
+						<section id="MotionTrack">
+							<p> <strong>Motion Tracking with 2 Smartphone Cameras</strong></p>
+							<center>
+							<blockquote class="instagram-media" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BCWyImLAg46/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A video posted by Atomik Jëssõn West Gohh (@atomicwest_og)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-02-29T04:00:24+00:00">Feb 28, 2016 at 8:00pm PST</time></p></div></blockquote>
+								<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+							</center>
+							<p> I tried using MotionBuilder to capture convincing track points and realistic animation for
+							character rigs in Maya. With some tape, I marked the major joints on my left hand/fingers and
+							created a crosshair with a Sharpie for improved visibility during automatic tracking.
+							One old Galaxy was propped above my hand while I held up another Galaxy to record at another angle.
+							I just twitched my fingers for a minute and imported the footage as a .png sequence into MotionBuilder
+							Unfortunately, it was hard to resolve cases where the marker disappears from view (i.e. making
+							a fist) and I didn't mark good trackers to establish a consistent coordinate system.
+							I used the hand skeleton model, but at the time it was better to parent the IK handles to the imported
+							trackers.
+							In the future, I think MotionBuilder would be good if the live-action subject had trackers that corresponded
+							to something like the IK handles or rig controllers on the models I use. The positions of both cameras should
+							be a little different in the future, or better yet, an additional camera to track points that fall out of
+							view from either camera. I can see this process being useful for more 2D applications.</p>
+						</section>
+
+						<section id="HandSkel">
+							<p><strong> Anatomically Correct Hand Skeleton </strong></p>
+							<p> Made in Maya, trying some tracking; also failing at tracking.</p>
+							<center>
+								<img src="resources/maya/skeleton/renderCarpal2.png" alt=" " style="width: 75%; max: 75%">
+								<img src="resources/maya/skeleton/handwt.png" alt=" " style="width: 75%; max: 75%">
+								<img src="resources/maya/skeleton/track_xray.PNG" alt=" " style="width: 75%; max: 75%">
+
+							</center>
+						</section>
+
+						<br>
+
+						<section id="Python FPS">
+							<p><strong><a href="currprojects.html#pygameTFA">Pygame/RPi FPS</a></strong></p>
+							<br>
+							<p>An FPS powered by Python, using assets made in Maya and running on a Raspberry Pi B+; follow the link above for more information.</p>
+							<center>
+							<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BAs05QQggwb/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"></a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+							</p></div></blockquote>
+							<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+							</center>
+						</section>
+
+						<br>
+
+						<section id="XWing">
+							<p> <strong> <a href="currprojects.html#TFA3D">Resistance X-Wing in Unity3D</a></strong><br></p>
+							<br>
+							<p>Some screenshots of a future game powered by Unity; hopefully porting this to mobile in the long run.</p>
+							<center>
+							<img src="resources/images/crprojects/xwing/XWingVTIE.png" alt=" " style="width: 75%; max-height: 75%"> <br>
+							<img src="resources/images/crprojects/xwing/xwingrawshot2.png" alt=" " style="width: 75%; max-height: 75%"><br>
+							</center>
+						</section>
+						<br>
+
+						<section id="LSIG">
+							<p><strong><a href="currprojects.html#AEfilter">After Effects, OpenGL, and New Plugins</a></strong>
+							</p>
+
+							<p align="justify"> So, this is really just a video with AE without any of the plugin/filters that
+							I had in mind, but follow the link for a better description of what I'm aiming for.</p>
+							<center>
+							<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/_Q-G8JAg0U/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"></a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+							</p></div></blockquote>
+							<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+							</center>
+						</section>
+						<br>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="disclaimer">
+		<p style="text-align: center; padding: 0px">&#169;Copyright - J. Go, 2016</p>
+	</footer>
+</body>
+</html>

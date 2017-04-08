@@ -1,0 +1,108 @@
+h1,h2,h3,h4,h5,p,.navbar {
+    font-family: Verdana;
+}
+
+.container{
+    border-color: #DDD;
+    border-width: 2px;
+}
+
+h1, h2, h5, #score, #contactpage {
+    text-align: center;
+    font-weight: bold;
+}
+
+#contactpage {
+    padding: 25px;
+}
+
+#VRyavin {
+    text-align:center;
+    padding: 30px;
+}
+
+body {
+    padding-top: 50px;
+}
+
+footer {
+    /*position: fixed;*/
+    
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+    background-color: #EEE;
+    padding:10px;
+}
+
+input {
+    vertical-align: baseline;
+}
+
+img {
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item {
+    display: block;
+    margin: 0 auto;
+    width: 100%; 
+    height: 100%;
+}
+
+.scoretable, .nametable {
+   text-align: center; 
+}
+
+
+#footer-container {
+    padding-top: 5px;
+}
+
+.center-block, canvas, #homebtn, #scoresubmit {
+    padding: 0;
+    margin: auto;
+    display: block;
+}
+
+.centerform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    border: 2px solid #909090;
+}
+
+.navul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #EEEEE;
+    display: flex;
+    align-items: center;
+}
+
+.navli {
+    float: left;
+    
+}
+
+.navli a {
+    display: block;
+    color: #444;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navli a:hover {
+    background-color: #777;
+}
+
+
+
