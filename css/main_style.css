@@ -155,3 +155,7 @@ canvas {
     background-color: rgba(230,230,230,1);
     background-image: url("../img/backgrounds/steampunk_city_6hr_freestyle_faded.png");
 }
+
+#homepage p,  h4 {
+    text-align: center;
+}
