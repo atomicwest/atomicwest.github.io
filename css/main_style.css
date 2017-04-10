@@ -2,10 +2,18 @@ h1,h2,h3,h4,h5,p,.navbar {
     font-family: Verdana;
 }
 
-.container{
-    border-color: #DDD;
-    border-width: 2px;
+#home, #projects, #contact {
+    padding: 10px;
 }
+
+#topnav {
+    background-color: rgba(50,100,100,0.9);
+}
+
+#topnav::after{
+    filter: blur(5px);
+}
+
 
 h1, h2, h5, #score, #contactpage {
     text-align: center;
@@ -13,12 +21,22 @@ h1, h2, h5, #score, #contactpage {
 }
 
 #contactpage {
-    padding: 25px;
+    padding-top: 25px;
+    padding-bottom:40px;
+    
 }
 
-#VRyavin {
+#VRyavin, #compositing, #demoreel {
     text-align:center;
-    padding: 30px;
+    padding-top: 10px;
+    /*padding: 30px;*/
+}
+
+#VRyavin{
+    padding-bottom: 30px;
+}
+#compositing, #demoreel {
+    padding-bottom: 40px;
 }
 
 body {
@@ -29,7 +47,7 @@ footer {
     /*position: fixed;*/
     
     height: 60px;
-    bottom: 0;
+    /*bottom: 0;*/
     width: 100%;
     background-color: #EEE;
     padding:10px;
@@ -104,5 +122,36 @@ canvas {
     background-color: #777;
 }
 
+#brand, #lists li a {
+    color: #FFF;
+}
+
+#lists li a:hover {
+    color:#CCC;
+    background-color: rgba(150,150,150,0.7);
+}
+
+#homepage {
+    background-color: rgba(245,245,245,0.3);
+    padding-bottom:20px;
+    background-image: url("../img/backgrounds/donuts_freestyle2_faded.png");
+}
 
 
+#projectpage {
+    background-color: rgba(240,240,240,1);
+    padding-bottom: 20px;
+    background-image: url("../img/backgrounds/double_bass_freestyle_faded.png");
+}
+
+#demopage {
+    background-color: rgba(235,235,235,1);
+    padding-top:10px;
+    background-image: url("../img/backgrounds/revenger_freestyle2_faded.png");
+}
+
+
+#contactpage {
+    background-color: rgba(230,230,230,1);
+    background-image: url("../img/backgrounds/steampunk_city_6hr_freestyle_faded.png");
+}
