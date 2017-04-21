@@ -156,6 +156,6 @@ canvas {
     background-image: url("../img/backgrounds/steampunk_city_6hr_freestyle_faded.png");
 }
 
-#homepage p,  h4 {
+#homepage p, h3, h4 {
     text-align: center;
 }
