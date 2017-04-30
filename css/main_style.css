@@ -15,7 +15,7 @@ h1,h2,h3,h4,h5,p,.navbar {
 }
 
 
-h1, h2, h5, #score, #contactpage {
+h1, h2, h3, h5, #score, #contactpage {
     text-align: center;
     font-weight: bold;
 }
@@ -137,6 +137,9 @@ canvas {
     background-image: url("../img/backgrounds/donuts_freestyle2_faded.png");
 }
 
+#homepage p,  h4 {
+    text-align: center;
+}
 
 #projectpage {
     background-color: rgba(240,240,240,1);
@@ -156,6 +159,18 @@ canvas {
     background-image: url("../img/backgrounds/steampunk_city_6hr_freestyle_faded.png");
 }
 
-#homepage p, h3, h4 {
-    text-align: center;
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

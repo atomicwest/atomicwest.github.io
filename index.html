@@ -40,6 +40,8 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#demos">Demos</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/atomicwest" target="blank">Github</a></li>
+            <li><a href="https://atomicprime.wordpress.com" target="blank">Wordpress</a></li>
           </ul>
         </div>
       </div>
@@ -63,6 +65,7 @@
         <div id="projectpage">
             <a class="smooth" id="projects"></a>
             <h2>Projects</h2>
+            <center><p>______________________________</p></center>
             <div class="container">
               <h3>3D content created in Blender and Maya</h3>
               <div id="carouselProjects" class="carousel slide" data-ride="carousel">
@@ -149,10 +152,13 @@
                   <span class="sr-only">Next</span>
                 </a>
             </div>
-            
+            <br>
             <div class="container" id="VRyavin">
                 <h3>Panoramic VR Test</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/EOs-8CPROhg" frameborder="0" allowfullscreen></iframe>
+                <p>Associated Github is <a href="https://github.com/atomicwest/BlenderScripts">here</a>.</p>
+                <div class="video-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/EOs-8CPROhg" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <br>
                 <br>
                 <h3>Number System Converter</h3>
@@ -170,22 +176,28 @@
                 <h3>VR Pac-Man Clone</h3>
                 
                 <img src="img/pac_and_ghost.png" alt="VR Pacman models">
-                <img src="img/wandering_scoring_basic_done.PNG" alt="VR Pacman">
+                <img src="img/pacman_orange_cyan.PNG" alt="PacMan and Orange/Cyan">
                 <br>
                 <br>
                 <p>I am currently working on a VR version of Pac-Man on Unity. The basic gameplay 
-                is done: Pac-Man moves in the direction
-                that you are facing, score is increased by eating pellets, and the game
-                ends when you touch a ghost. 
+                is done: 
+                  <ul>
+                    <li>PacMan moves in the direction you are facing</li>
+                    <li>Consuming pellets increases your score</li>
+                    <li>Consuming super pellets makes ghosts edible for a short time</li>
+                    <li>Touching a ghost otherwise results in a loss of a life</li>
+                    <li>Basic fidgeting animations are provided to ghosts</li>
+                    <li>The game ends when you are touched by a ghost and have no lives</li>
+                    <li>Ghosts have a generic wandering script and aimlessly move about the maze</li>
+                  </ul>
                 <br>
                 <br>
                 <img src="img/pacman_dead.PNG" alt="VR Pacman dead">
                 <br>
                 <br>
-                The next goals are programming the special
-                pellets to make ghosts edible, teleporting from one end of the 
-                screen to the other, and adding levels. I also want to update
-                the models to add more character animation and the environment to add glowing textures.</p>
+                The next goal is to program a proper pathfinding algorithm for
+                the ghosts that will hopefully will mimic the behavior in the 
+                original game. Github is <a href=https://github.com/atomicwest/PacManVR>here</a>.</p>
                 
                 
                 
@@ -201,21 +213,25 @@
             <div class="container">
               <h2>Demos</h2>
             </div>
-            
+            <center><p>______________________________</p></center>
             <div class="container" id="demoreel">
                 <h3>Demo Reel (Short)</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TxAJPc4N_7k" frameborder="0" allowfullscreen></iframe>
+                <div class="video-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/TxAJPc4N_7k" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
             
             <div class="container" id="compositing">
                 <h3>Compositing Demo</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Nk_oxGqRls" frameborder="0" allowfullscreen></iframe>
+                <div class="video-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/-Nk_oxGqRls" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
             
         </div>
         
-        
-         
+      
+      
         
         <div id="contactpage">
             <a class="smooth" id="contact"></a>
