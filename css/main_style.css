@@ -26,13 +26,13 @@ h1, h2, h3, h5, #score, #contactpage {
     
 }
 
-#VRyavin, #compositing, #demoreel {
+#non-carousel-projects, #compositing, #demoreel {
     text-align:center;
     padding-top: 10px;
     /*padding: 30px;*/
 }
 
-#VRyavin{
+#non-carousel-projects{
     padding-bottom: 30px;
 }
 #compositing, #demoreel {
@@ -177,4 +177,10 @@ canvas {
 
 .carousel-inner > .item > img {
     margin: 0 auto;
+}
+
+#listwrap ul{
+    width:100%;
+    list-style-position: outside;
+    padding-left: 40pt;
 }
