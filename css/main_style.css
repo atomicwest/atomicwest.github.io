@@ -3,7 +3,7 @@ h1,h2,h3,h4,h5,p,.navbar {
 }
 
 #home, #projects, #contact {
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
 }
 
 #topnav {
@@ -34,20 +34,21 @@ h1, h2, h3, h5, #score, #contactpage {
 
 #non-carousel-projects{
     padding-bottom: 30px;
+    /*padding-right: 20px;*/
 }
 #compositing, #demoreel {
     padding-bottom: 40px;
 }
 
 body {
-    padding-top: 50px;
+    padding: 50px 50px 0px 50px;
 }
 
 footer {
     /*position: fixed;*/
-    
+    box-shadow: 0px 500px 0px 500px #EEE;
     height: 60px;
-    /*bottom: 0;*/
+    bottom: 0;
     width: 100%;
     background-color: #EEE;
     padding:10px;
@@ -100,7 +101,7 @@ canvas {
     margin: 0;
     padding: 5px;
     overflow: hidden;
-    background-color: #EEEEE;
+    background-color: #EEEEEE;
     display: flex;
     align-items: center;
 }
@@ -132,9 +133,9 @@ canvas {
 }
 
 #homepage {
-    background-color: rgba(245,245,245,0.3);
+    /*background-color: rgba(245,245,245,0.3);*/
     padding-bottom:20px;
-    background-image: url("../img/backgrounds/donuts_freestyle2_faded.png");
+    /*background-image: url("../img/backgrounds/donuts_freestyle2_faded.png");*/
 }
 
 #homepage p,  h4 {
@@ -142,27 +143,29 @@ canvas {
 }
 
 #projectpage {
-    background-color: rgba(240,240,240,1);
+    /*background-color: rgba(240,240,240,1);*/
+    /*padding-right: 15px;*/
     padding-bottom: 20px;
-    background-image: url("../img/backgrounds/double_bass_freestyle_faded.png");
+    /*background-image: url("../img/backgrounds/double_bass_freestyle_faded.png");*/
 }
 
 #demopage {
-    background-color: rgba(235,235,235,1);
+    /*background-color: rgba(235,235,235,1);*/
     padding-top:10px;
-    background-image: url("../img/backgrounds/revenger_freestyle2_faded.png");
+    /*background-image: url("../img/backgrounds/revenger_freestyle2_faded.png");*/
 }
 
 
 #contactpage {
-    background-color: rgba(230,230,230,1);
-    background-image: url("../img/backgrounds/steampunk_city_6hr_freestyle_faded.png");
+    /*background-color: rgba(230,230,230,1);*/
+    /*background-image: url("../img/backgrounds/steampunk_city_6hr_freestyle_faded.png");*/
 }
 
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
+
 }
  
 .video-container iframe,
