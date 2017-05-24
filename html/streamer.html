@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+	<header>
+		<title>Basic JS Streaming</title>
+		<style>
+			.container  {
+				margin: 0 auto;
+				width: 100%;
+				padding: 40px 30px 40px 30px;
+			}
+		</style>
+	</header>
+    <body>
+        <div class="container">
+            <h1>Basic JS Streaming</h1>
+			
+            <img id="window" src="rancor_GL_jpg/rancorGL0210.jpg" alt="">
+            <p>A jpg image sequence is loaded sequentially onto the div element,
+				emulating a media stream.</p>
+            <script>
+                var i=219;
+				var reverse=false;
+				
+                function switcher() {
+					
+					if (i>=270) {
+						reverse=true;
+					} else if (i <= 219) {
+						reverse=false;
+					}
+					
+					if (reverse){
+						i-=1;
+					} else {
+						i+=1;
+					}
+                    
+					var addstr = "rancor_GL_jpg/rancorGL0"+i+ ".jpg";;
+					console.log(addstr);
+                    document.getElementById("window").src=addstr;    
+                }
+                window.setInterval(function(){
+					switcher()
+					}, 80);
+            </script>
+            
+        </div>
+    </body>
+</html>
