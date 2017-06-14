@@ -1,0 +1,126 @@
+
+html {
+  background: url(../images/background.svg);
+  background-size: auto auto;
+}
+
+.midbox {
+  vertical-align: middle;
+}
+
+@media only screen and (min-width : 481px) {
+   .flex-row.row {
+  	 display: flex;
+  	 flex-wrap: wrap;
+   }
+   .flex-row.row > [class*='col-'] {
+  	 display: flex;
+  	 flex-direction: column;
+   }
+  .flex-row.row:after, .flex-row.row:before {
+	   display: flex;
+   }
+}
+
+.usrtxt {
+  display: table-cell;
+  color: #000000;
+}
+
+.container {
+  padding-bottom: 50px;
+}
+
+.container,body {
+  background: transparent;
+}
+
+.col-lg-3, .col-md-3, .col-sm-6, .col-xs-12 {
+  display:table;
+  padding: 10px;
+  border-style: double;
+  border-radius: 10px;
+  border-color: #dbeeff;
+  vertical-align: middle;
+  width: 33%;
+}
+
+.btn-group {
+  vertical-align: middle;
+}
+
+.jumbotron {
+  background-color: #8698a8;
+  color: #eaf4fc;
+}
+
+.btn-primary {
+  margin: 2px;
+  background-color: #7f61f4;
+}
+
+/*.col-lg-3{
+  text-align: center;
+}*/
+
+#result {
+  /*font-size: 18px;*/
+  color: #5d3b99;
+}
+
+h2, #desc, #example, #equation {
+  text-align: center;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+/*body {
+  background: url(../images/background.svg);
+  background-size: auto auto;
+}*/
+
+.navbar-fixed-bottom {
+  background-color: #ede8ff;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    display: block;
+    /*margin: 0 auto;*/
+    margin-left:auto;
+    margin-right: auto;
+
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+.ingred {
+  width: 100%;
+}
+
+/*.form-control{
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+
+.text-center {
+  text-align: center;
+}*/
