@@ -21,7 +21,7 @@
 <tr>
     <td>Level:</td>    
     <td>
-        <input type="text" id="LevelIn" name="LevelIn" class="user-detail" ng-model="ModelData.LevelIn">
+        <input type="text" id="LevelIn" name="LevelIn" class="user-detail" ng-model="levelup">
     </td>
 </tr>
 
@@ -33,14 +33,14 @@
             <td>
             <label for="humanclass">
                 <input type="radio" id="humanclass" name="ClassButtons" ng-model="ClassOptions"
-                value="M" />
+                value="Humans" />
                 Human
             </label>   
             </td>
             <td>
             <label for="orcclass">
                 <input type="radio" id="orcclass" name="ClassButtons" ng-model="ClassOptions"
-                    value="Bd" />
+                    value="Orcs" />
                 Orc
             </label>    
             </td>
@@ -49,14 +49,14 @@
             <td>
             <label for="elfclass">
                 <input type="radio" id="elfclass" name="ClassButtons" ng-model="ClassOptions"
-                    value="P" />
+                    value="Elves" />
                 Elf
             </label>            
             </td>
             <td>
             <label for="dwarfclass">
                 <input type="radio" id="dwarfclass" name="ClassButtons" ng-model="ClassOptions"
-                    value="R" />
+                    value="Dwarves" />
                 Dwarf
             </label>            
             </td>
@@ -65,14 +65,14 @@
             <td>
             <label for="dragonclass">
                 <input type="radio" id="dragonclass" name="ClassButtons" ng-model="ClassOptions"
-                    value="Bb" />
+                    value="Dragonborne" />
                 Dragonborne
             </label>
             </td>
             <td>
             <label for="halflingclass">
                 <input type="radio" id="halflingclass" name="ClassButtons" ng-model="ClassOptions"
-                    value="W" />
+                    value="Halflings" />
                 Halfling
             </label>    
             </td>
@@ -91,3 +91,29 @@
 </tr>
 
 </table>
+
+<br>
+<h3>Character Statement</h3>
+<div class="container-fluid">
+    My name is 
+    <b>{{ModelData.CharName}}</b>,
+    known in the other world as
+    <b>{{ModelData.PName}}</b>, 
+    a level 
+    <b>{{levelup}}</b>
+    member of the noble
+    <b>{{ClassOptions}}</b>.
+</div>
+
+<br><br>
+
+<div class="container-fluid">
+    Joining my party are
+    <b><input type="text" placeholder="Tweedledee" class="usr"></b>,
+    <b><input type="text" placeholder="Tweedledumb" class="usr"></b>,
+    and
+    <b><input type="text" placeholder="Bob" class="usr"></b>,
+    as we begin a great adventure.
+</div>
+
+<br>
