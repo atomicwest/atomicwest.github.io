@@ -1,35 +1,90 @@
+<p> 
+    All characters have a unique identity that you define
+    at the beginning of the campaign. 
+</p>
+
 <table border="0">
 <tr>
-    <td>
-        Character Name:    
-    </td>    
+    <td>Character Name:</td>    
     <td>
         <input type="text" id="CharName" name="CharName" class="user-detail" ng-model="ModelData.CharName">    
     </td>
 </tr>
 
 <tr>
-    <td>
-        Player Name:
-    </td>    
+    <td>Player Name:</td>    
     <td>
         <input type="text" id="PName" name="PName" class="user-detail" ng-model="ModelData.PName">
     </td>
 </tr>
     
 <tr>
-    <td>
-        Level:
-    </td>    
+    <td>Level:</td>    
     <td>
         <input type="text" id="LevelIn" name="LevelIn" class="user-detail" ng-model="ModelData.LevelIn">
     </td>
 </tr>
 
 <tr>
+    <td>Race:</td>
     <td>
-        Experience Points:
-    </td>    
+    <table class="racechoice">
+        <tr>
+            <td>
+            <label for="humanclass">
+                <input type="radio" id="humanclass" name="ClassButtons" ng-model="ClassOptions"
+                value="M" />
+                Human
+            </label>   
+            </td>
+            <td>
+            <label for="orcclass">
+                <input type="radio" id="orcclass" name="ClassButtons" ng-model="ClassOptions"
+                    value="Bd" />
+                Orc
+            </label>    
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <label for="elfclass">
+                <input type="radio" id="elfclass" name="ClassButtons" ng-model="ClassOptions"
+                    value="P" />
+                Elf
+            </label>            
+            </td>
+            <td>
+            <label for="dwarfclass">
+                <input type="radio" id="dwarfclass" name="ClassButtons" ng-model="ClassOptions"
+                    value="R" />
+                Dwarf
+            </label>            
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <label for="dragonclass">
+                <input type="radio" id="dragonclass" name="ClassButtons" ng-model="ClassOptions"
+                    value="Bb" />
+                Dragonborne
+            </label>
+            </td>
+            <td>
+            <label for="halflingclass">
+                <input type="radio" id="halflingclass" name="ClassButtons" ng-model="ClassOptions"
+                    value="W" />
+                Halfling
+            </label>    
+            </td>
+        </tr>
+    </table>
+    </td>
+    
+    
+</tr>
+
+<tr>
+    <td>Experience Points:</td>    
     <td>
         <input type="text" id="ExPts" name="ExPts" class="user-detail" ng-model="ModelData.ExPts">
     </td>

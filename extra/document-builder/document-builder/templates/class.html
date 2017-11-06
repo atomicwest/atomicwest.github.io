@@ -1,39 +1,89 @@
+<p>
+    Certain items, skills, attribute bonuses, and action penalties
+    depend on the class that you choose for your character. 
+    Specialized spellcasters (Mages, Warlocks) have access to nearly all spells in the 
+    compendium arcana but are unable to use more advanced armor
+    and weaponry that would be accessible to physical combat-focused
+    classes (Rogues, Barbarians). Classes that can balance physical
+    and non-physical aspects (Paladins, Bards) have limited access
+    to both skill sets.
+</p>
 
-<label for="FirstName" class="col-md-9">
-    
-    <input type="radio" id="ClassOptionsA" name="ClassButtons" ng-model="ModelData.ClassOptions"
-    value="M" />
-    Mage
-    <input type="radio" id="ClassOptionsB" name="ClassButtons" ng-model="ModelData.ClassOptions"
-        value="D" />
-    Druid
-    <input type="radio" id="ClassOptionsA" name="ClassButtons" ng-model="ModelData.ClassOptions"
-        value="R" />
-    Rogue
-    <input type="radio" id="ClassOptionsB" name="ClassButtons" ng-model="ModelData.ClassOptions"
-        value="P" />
-    Paladin
-    <input type="radio" id="ClassOptionsA" name="ClassButtons" ng-model="ModelData.ClassOptions"
-        value="B" />
-    Barbarian
-    <input type="radio" id="ClassOptionsB" name="ClassButtons" ng-model="ModelData.ClassOptions"
-        value="W" />
-    Warlock
-    <input type="radio" id="ClassOptionsA" name="ClassButtons" ng-model="ModelData.ClassOptions"
-        value="A" />
-    Bard
-    
-    
-</label>
+<table class="classchoice">
+    <tr>
+        <td>
+        <label for="mageclass">
+            <input type="radio" id="mageclass" name="ClassButtons" ng-model="ClassOptions"
+            value="M" />
+            Mage
+        </label>   
+        </td>
+        <td>
+        <label for="bardclass">
+            <input type="radio" id="bardclass" name="ClassButtons" ng-model="ClassOptions"
+                value="Bd" />
+            Bard
+        </label>    
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for="paladinclass">
+            <input type="radio" id="paladinclass" name="ClassButtons" ng-model="ClassOptions"
+                value="P" />
+            Paladin
+        </label>            
+        </td>
+        <td>
+        <label for="rogueclass">
+            <input type="radio" id="rogueclass" name="ClassButtons" ng-model="ClassOptions"
+                value="R" />
+            Rogue
+        </label>            
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for="barbclass">
+            <input type="radio" id="barbclass" name="ClassButtons" ng-model="ClassOptions"
+                value="Bb" />
+            Barbarian
+        </label>
+        </td>
+        <td>
+        <label for="warlockclass">
+            <input type="radio" id="warlockclass" name="ClassButtons" ng-model="ClassOptions"
+                value="W" />
+            Warlock
+        </label>    
+        </td>
+    </tr>
 
+</table>
 
-
-<br>
         
-
+<div class="wrapper" id="classbox">
+    <div ng-show="ClassOptions == 'M'" >
+        <div ng-include="'templates/classes/mage.html'"></div>    
+    </div>
     
-
-<div class="form-group" ng-show="ModelData.Class">
+    <div ng-show="ClassOptions == 'W'" >
+        <div ng-include="'templates/classes/warlock.html'"></div>    
+    </div>
     
-            
+    <div ng-show="ClassOptions == 'R'" >
+        <div ng-include="'templates/classes/rogue.html'"></div>    
+    </div>
+    
+    <div ng-show="ClassOptions == 'P'" >
+        <div ng-include="'templates/classes/paladin.html'"></div>    
+    </div>
+    
+    <div ng-show="ClassOptions == 'Bd'" >
+        <div ng-include="'templates/classes/bard.html'"></div>    
+    </div>
+    
+    <div ng-show="ClassOptions == 'Bb'" >
+        <div ng-include="'templates/classes/barbarian.html'"></div>    
+    </div>
 </div>

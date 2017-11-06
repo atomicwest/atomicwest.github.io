@@ -41,6 +41,35 @@ textarea{
     /*border-width: thin;*/
 }
 
-td {
-    padding: 15px;
+th,td {
+    padding: 10px;
+}
+
+.classtable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.classtable th{
+    background-color: #a3c6ff;
+}
+
+.classtable {
+    margin: auto;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.classtable table, .classtable th, .classtable td{
+    border: 1px solid #aaa;
+}
+
+#button-row li{
+    margin-top: 2px;
+    padding:5px;
+}
+
+.classchoice, .racechoice {
+    margin: auto;
+    width: 100%;
+    border: 0px;
 }
