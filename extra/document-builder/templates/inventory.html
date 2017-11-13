@@ -1,0 +1,135 @@
+<style>
+    #inv-table{
+        width: 100%;
+        /*border-right:0px;*/
+    }
+    
+    .indroll, .indval {
+        width: 50%;
+    }
+    
+    .tdhide {
+        border:0;
+        align-content: center;
+    }
+    
+    .tdhidden{
+        visibility:hidden;
+    }
+    
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    
+    $(document).ready(function(){
+        document.getElementById("percentr").checked=true;
+        $(".addrow").click(function(){
+            var prevval = document.getElementById();
+            var item = '<td><input type="text" name="initem" class="initem" placeholder="Arrow of Razorwind"></td>';
+            var roll = '<td><input type="text" class="indroll" placeholder="1d8"></td>';
+            var indval = '<td><input type="text" class="indval" placeholder="10"></td>';
+            var percentof = '<td><select name="percof" id="percof"><option value="time">Time</option><option value="damage">Damage</option></select></td>';
+            var descr = '<td><input type="text" class="insfx" placeholder="Each extra arrow deals 1d8 piercing damage on a successful hit."></td>';
+            // var delbtn = '<td class="tdhide"><button class="btn btn-danger delrow" name="delrow" type="button">X</button></td>'
+            var delchk = '<td class="tdhide"><input type="checkbox" name="rowcheck"></td>'
+            var newtags = '<tr>'
+                        + item
+                        + roll
+                        + indval
+                        + percentof
+                        + descr
+                        + delchk
+                        + '</tr>';
+            $("#ex-inv").append(newtags);
+        });
+        
+        // Find and remove selected table rows
+        $(".delrow").click(function(){
+            $("#ex-inv").find('input[name="rowcheck"]').each(function(){
+               if($(this).is(":checked")){
+                   $(this).parents("tr").remove();
+               }
+            });
+            
+            // $("tbody").find('input[name="initem"]').each(function(){
+            //     if($(this).is(":checked")){
+            //         $(this).parents("tr").remove();    
+            //     }
+            // });
+            // $(this).parents("tr").remove();
+            // console.log(event);
+        });
+        
+        $("input[type='radio']").on('change', function(){
+            var radval = $("input[name='ValOpt']:checked").val();
+            if(radval=='intg'){
+                $("td:nth-child(4), th:nth-child(4)").hide();
+            } else {
+                $("td:nth-child(4), th:nth-child(4)").show();
+            }
+        })
+    });   
+</script>
+
+<h4><label for="Inventory">
+    <input type="checkbox" id="Inventory" name="Inventory" ng-model="ModelData.Inventory">
+    Inventory
+</label></h4>
+    
+
+<div class="form-group" ng-show="ModelData.Inventory">
+    <table border="1" id="inv-table">
+        
+        <tr>
+            <th>Item Name</th>
+            <th>Damage Roll</th>
+            <th>
+                <label for="percentr">
+                    <input type="radio" id="percentr" name="ValOpt" checked="checked" ng-model="ClassOptions"
+                        value="perc" />
+                    Percent
+                </label>
+                <label for="integerr">
+                    <input type="radio" id="integerr" name="ValOpt" ng-model="ClassOptions"
+                        value="intg" />
+                    Integer
+                </label>
+            </th>
+            <th>% of</th>
+            <th>Side Effects</th>
+            <th id="toph" style="border:0px;"></th>
+        </tr>
+        
+        <tr>
+            <td><input type="text" class="initem" placeholder="Arrow of Razorwind"></td>
+            <td><input type="text" class="indroll" placeholder="1d8"></td>
+            <td><input type="text" class="indval" placeholder="10"></td>
+            <td><select name="percof" id="percof">
+                <option value="time">Time</option>
+                <option value="damage">Damage</option>
+            </select></td>
+            <td><input type="text" class="insfx" placeholder="Each extra arrow deals 1d8 piercing damage on a successful hit."></td>
+            <td class="tdhide tdhidden"><button class="btn btn-danger delrow" name="delrow" type="button">X</button></td>
+        </tr>
+        
+        <tbody id="ex-inv">
+        
+        <tr>
+            <td><input type="text" name="initem" class="initem"></td>
+            <td><input type="text" class="indroll"></td>
+            <td><input type="text" class="indval"></td>
+            <td><select name="percof" id="percof">
+                <option value="time">Time</option>
+                <option value="damage">Damage</option>
+            </select></td>
+            <td><input type="text" class="insfx"></td>
+            <td class="tdhide"><input type="checkbox" name="rowcheck"></td>
+        </tr>
+        
+        </tbody>
+    </table>
+    <br>
+    <button type="button" class="btn btn-success addrow">Add Row</button>
+    <button type="button" class="btn btn-danger delrow">Delete Selected Rows</button>
+</div>
+
