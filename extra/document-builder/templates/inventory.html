@@ -24,8 +24,10 @@
     $(document).ready(function(){
         document.getElementById("percentr").checked=true;
         $(".addrow").click(function(){
-            var prevval = document.getElementById();
-            var item = '<td><input type="text" name="initem" class="initem" placeholder="Arrow of Razorwind"></td>';
+            var prevval = document.getElementById("itemone").value;
+            console.log(prevval);
+            var item = '<td><input type="text" name="initem" id="newv" class="initem" '
+            var itemsubval = 'value="' + prevval-1 + '"></td>';
             var roll = '<td><input type="text" class="indroll" placeholder="1d8"></td>';
             var indval = '<td><input type="text" class="indval" placeholder="10"></td>';
             var percentof = '<td><select name="percof" id="percof"><option value="time">Time</option><option value="damage">Damage</option></select></td>';
@@ -33,7 +35,7 @@
             // var delbtn = '<td class="tdhide"><button class="btn btn-danger delrow" name="delrow" type="button">X</button></td>'
             var delchk = '<td class="tdhide"><input type="checkbox" name="rowcheck"></td>'
             var newtags = '<tr>'
-                        + item
+                        + item + itemsubval
                         + roll
                         + indval
                         + percentof
@@ -41,6 +43,7 @@
                         + delchk
                         + '</tr>';
             $("#ex-inv").append(newtags);
+            document.getElementById("newv").value=prevval-1;
         });
         
         // Find and remove selected table rows
@@ -101,7 +104,7 @@
         </tr>
         
         <tr>
-            <td><input type="text" class="initem" placeholder="Arrow of Razorwind"></td>
+            <td><input type="text" class="initem" id="itemone" placeholder="Arrow of Razorwind"></td>
             <td><input type="text" class="indroll" placeholder="1d8"></td>
             <td><input type="text" class="indval" placeholder="10"></td>
             <td><select name="percof" id="percof">
@@ -114,6 +117,7 @@
         
         <tbody id="ex-inv">
         
+        <!--
         <tr>
             <td><input type="text" name="initem" class="initem"></td>
             <td><input type="text" class="indroll"></td>
@@ -125,7 +129,7 @@
             <td><input type="text" class="insfx"></td>
             <td class="tdhide"><input type="checkbox" name="rowcheck"></td>
         </tr>
-        
+        -->
         </tbody>
     </table>
     <br>
