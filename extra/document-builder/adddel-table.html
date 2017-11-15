@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    
+    <title>Toggle Table</title>
+    <meta charset='utf-8'>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+    <script>
+        $(document).ready(function(){
+            $(".addrow").click(function(){
+                var in1 = '<td><input type="text"></td>';
+                var in2 = '<td><input type="text"></td>';
+                var in3 = '<td><input type="text"></td>';
+                var chk = '<td><input type="checkbox" class="rowcheck"></td>';
+                var row = '<tr>'
+                        + in1 + in2 + in3 + chk
+                        + '</tr>';
+                $('#addtable').append(row);
+            });
+            
+            $(".delrow").click(function(){
+                $('#addtable').find('input[class="rowcheck"]').each(function(){
+                    if($(this).is(":checked")){
+                        $(this).parents("tr").remove();
+                    }
+                })
+            })
+        });
+    </script>
+    
+    <div ng-app>
+        
+        <div class="container">
+        
+        <label for="">
+            <input type="radio" name="gettable1" id="gettable1" value=""/>
+        </label>
+        
+        <table id="mytable">
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Row entry 1</td>
+                <td>Row entry 2</td>
+                <td>Row entry 3</td>
+                <td><input type="checkbox" class="rowcheck"></td>
+            </tr>
+            
+            <tbody id="addtable">
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="checkbox" class="rowcheck"></td>
+            </tbody>
+        </table>
+        
+            
+        </div>
+        <button class="btn btn-primary addrow" type="button">Add Row</button>
+        <button class="btn btn-danger delrow" type="button">Delete Row</button>
+        
+    </div>
+    
+</html>
