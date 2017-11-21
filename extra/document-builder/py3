@@ -7,3 +7,23 @@ sudo make install
 
 
 python -m http.server
+
+==============
+
+touch ~/.bash_aliases
+
+sudo apt-get install nano
+
+sudo nano /etc/bash.bashrc
+
+  if [ -f ~/.bash_aliases ]; then
+      . ~/.bash_aliases
+  fi
+
+sudo nano ~/.bash_aliases
+
+alias python=python3
+
+alias myserver="python -m http.server"
+
+source /etc/bash.bashrc
