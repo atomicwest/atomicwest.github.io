@@ -1,0 +1,43 @@
+need to install and start postgresql server
+
+$ sudo apt-get install postgresql postgresql-contrib
+
+$ sudo apt-get install libpq-dev
+
+$ pip install psycopg2
+- - --- -- - - - - - - - - - - - - 
+
+
+sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib
+
+$ sudo su - postgres
+$ psql
+# CREATE DATABASE tutorialdb;
+# CREATE USER tutee WITH PASSWORD 'pythontutorial123';
+
+- - - - - - 
+
+set utf-8 as default encoding, block reads from uncommited transactions, set timezone
+# ALTER ROLE tutee SET client_encoding TO 'utf8';
+# ALTER ROLE tutee SET default_transaction_isolation TO 'read committed';
+# ALTER ROLE tutee SET timezone TO 'UTC';
+# GRANT ALL PRIVILEGES ON DATABASE djangopoll TO tutee
+
+#\q
+$ exit
+
+
+
+$ source virtualenvname/bin/activate
+$ pip install psycopg2
+
+
+$ pip install dj-database-url
+
+cd into directory with manage.py
+$ python manage.py makemigrations
+$ python manage.py migrate
+
+
+every time afterward, start postgresql server:
+$ sudo service postgresql start

@@ -1,0 +1,77 @@
+========================================
+
+heroku deploy notes:
+
+activate virtualenv
+$ source venvname/bin/activate
+
+install heroku via command line:
+$ wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+double check install worked out
+$ heroku --version
+
+install gunicorn
+$ pip install gunicorn
+
+for flask, install flask_heroku
+$ pip install flask_heroku
+
+save all dependencies to txt file
+open txt to verify that gunicorn and all dependencies installed
+$ pip freeze > requirements.txt
+
+
+add to code where app = Flask(__name__) is declared:
+
+from flask_heroku import Heroku
+
+heroku = Heroku(app)
+db = SQLAlchemy(app)
+
+
+
+create procfile
+$ touch Procfile
+
+add in procfile
+web: gunicorn app:app
+
+before turning the project into a git repo, create a .gitignore file
+$ touch .gitignore
+
+
+make sure project is git-enabled, then commit
+$ git init
+$ git add .
+$ git commit -m "first commit"
+$ heroku create any-application-name
+
+
+enter heroku credentials when prompted, or login earlier
+$ heroku login
+
+make sure heroku addon is available:
+$ heroku addons:add heroku-postgresql:dev
+
+if that doesnt work, search on heroku for addons, and 
+add the heroku-postgresql add-on to the project
+
+$ git push heroku master
+
+if error message "No default language could be detectedd for this app
+Heroku cannot detect the buildpack to use for this application"
+check if the requirements.txt file was generated
+AND make another git commit/push
+
+if (postgresql) database was not configured,
+$ heroku run python
+>>> from app import db
+>>> db.create_all()
+>>> exit()
+
+restart heroku afterward
+$ heroku restart
+
+leave heroku session:
+$ heroku logout
