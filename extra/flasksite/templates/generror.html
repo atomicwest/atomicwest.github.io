@@ -1,0 +1,35 @@
+{% extends "generalpage.html" %}
+
+{% block title %} 
+  I have a bad feeling about this ... 
+{% endblock %}
+
+
+{% block jumboimg %}
+<img src="{{ url_for('static', filename = 'img/firstorder-stormtrooper-renderman2.png') }}" alt="" width="100%">
+{% endblock %}
+
+
+{% block jumbo %}
+  <center>
+  <h1>An unfortunate error occurred</h1>
+  </center>
+{% endblock %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="col-lg-2"></div>
+    
+    <div class="col-lg-8">
+      <center>
+      
+        <img src="{{ url_for('static', filename = 'img/unhappy.png') }}" width="50%" alt="">
+        <p>{{ err }}</p>
+      
+      </center>
+    </div>
+    
+    <div class="col-lg-2"></div>
+    
+  </div>
+{% endblock %}

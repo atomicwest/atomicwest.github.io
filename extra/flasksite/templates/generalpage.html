@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <head>
+    
+    <!--  jquery    -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- angular     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/mainsite.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename = 'img/archelon100x100.png' )  }}" />
+    
+    {% block head %}
+      <title>
+        {% block title %}{% endblock %} - JGo
+      </title>
+    {% endblock %}
+    
+  </head>
+  
+<!-- ================ navbar =========================  -->
+  <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">J. Go</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class=" {{ 'active' if active_page == 'index' else '' }} "><a href="/">Home</a></li>
+          <li class=" {{ 'active' if active_page == 'about' else '' }} "><a href="/about">About</a></li>
+          <li class=" {{ 'active' if active_page == 'projects' else '' }}"><a href="/projects">Projects</a></li>
+          <li class=" {{ 'active' if active_page == 'blog' else '' }}" ><a href="/blog">Blog</a></li>
+          <li class=" {{ 'active' if active_page == 'contact' else '' }}"><a href="/contact">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Find on site">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
+ 
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  
+<!-- ================ navbar end =========================  -->
+  <br><br>
+  <div class="jumbotron jumbotron-fluid">
+    
+    {% block jumboimg %}
+    {% endblock %}
+    
+    <div class="container">
+      <div class="col-lg-2"></div>
+      
+      <div class="col-lg-8 center-align-div">
+        {% block jumbo %}
+        {% endblock %}
+      </div>
+      
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+  
+  <!--   <div class="container" id="injectcontent"> -->
+  
+<!--  ============== main content ============== -->
+  {% block content %}
+  {% endblock %}
+<!--  ============ main content end ============ -->
+  
+<!--   </div> -->
+<!-- ================ footer =========================  -->
+  <footer class="footer footerbox center-align-div">
+    <div class="container">
+      <div class="col-md-3"></div>
+      
+      <div class="col-md-6">
+        <table>
+          <td><span class="footer-text"> J. Go ©2018 </span></td>
+          <td><a href="https://github.com/atomicwest">Github</a></td>
+          <td><a href="https://atomicprime.wordpress.com">Wordpress</a></td>
+        </table>
+      
+      </div>
+      
+      <div class="col-md-3"></div>
+      
+    </div>
+  </footer>
+  
+  
+<!-- ================ footer end =========================  -->
+
+
+</html>

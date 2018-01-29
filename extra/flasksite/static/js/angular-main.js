@@ -1,0 +1,1 @@
+var proj = angular.module('projectModule', ['ngMaterial'])

@@ -1,0 +1,84 @@
+#injectcontent {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.inputtext {
+  padding-top:10px;
+/*   vertical-align: middle; */
+/*   display: inline-block; */
+}
+
+.navbar {
+  background-color: #012345;
+}
+
+.centercontent {
+  border-right: 0px solid #000;
+  border-left: 0px solid #000;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerbox {
+  padding:10px;
+  background-color: #000;
+  
+}
+
+.center-align-div {
+  text-align: center;
+}
+
+.listingstuff {
+  align-content: center;
+  width: 80%;
+}
+
+.listingstuff td {
+/*   text-align: center; */
+  padding: 15px;
+/*   width: 100%; */
+/*   font-size: 25px; */
+}
+
+.listingstuff th{
+  text-align: right;
+}
+
+.listingstuff input, .listingstuff textarea {
+  width:100%;
+}
+
+.container-content {
+/*   background-color: #000; */
+}
+
+html {
+/*   background-color: #000; */
+}
+
+footer td {
+  padding: 8px;
+}
+
+footer table {
+  width: 100%;
+}
+
+.footer-text {
+  color: #999999;
+}
+
+.flash-msgs {
+  background-color: #ff8e8e;
+  color:#555;
+}
+
+.successmsg {
+  background-color: #b0ffad;
+}

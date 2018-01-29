@@ -1,0 +1,108 @@
+{% extends "generalpage.html" %}
+
+{% set active_page = "contact" %}
+
+{% block title %} 
+Contact
+{% endblock %}
+
+{% block jumbo %}
+<h1>Contact</h1>
+{% endblock %}
+
+{% block jumboimg %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="container-fluid container-content">
+    <div class="col-lg-2"></div>
+    
+    <div class="col-lg-8 centercontent">
+      
+<!--       {% if msg %}
+        <span style="color: #f73b3b">{{ msg }}</span>
+      {% endif %} -->
+      
+        
+      {% if successmsg %}
+        <div class="successmsg">{{ successmsg}}</div>
+      {% endif %}
+      
+      <form action="{{ url_for('contact') }}" method=POST name="contact">
+        {{ form.hidden_tag() }}
+        
+        <table class="listingstuff">
+          {% for message in get_flashed_messages() %}
+          <tr>
+            <td></td>
+            <td class="flash-msgs" style="bgcolor: #555;">
+              <center>{{ message }}</center>
+            </td>
+          </tr>
+          {% endfor %}
+          
+          {% for message in form.name.errors %}
+          <tr><td></td>
+            <td class="flash-msgs" style="bgcolor: #555;">
+              <center>{{ message }}</center></td></tr>
+          {% endfor %}
+          
+          {% for message in form.email.errors %}
+          <tr><td></td>
+            <td class="flash-msgs" style="bgcolor: #555;">
+              <center>{{ message }}</center></td></tr>
+          {% endfor %}
+          
+          {% for message in form.subject.errors %}
+          <tr><td></td>
+            <td class="flash-msgs" style="bgcolor: #555;">
+              <center>{{ message }}</center></td></tr>
+          {% endfor %}
+          
+          {% for message in form.message.errors %}
+          <tr><td></td>
+            <td class="flash-msgs" style="bgcolor: #555;">
+              <center>{{ message }}</center></td></tr>
+          {% endfor %}
+          
+        </table>
+        
+        <table class="listingstuff">  
+          <tr>
+            <th>{{ form.name.label }}</th>
+            <td>{{ form.name }}</td>
+          </tr>
+          
+          <tr>
+            <th>{{ form.email.label }}</th>
+            <td>{{ form.email }}</td>
+          </tr>
+          
+          <tr>
+            <th>{{ form.subject.label }}</th>
+            <td>{{ form.subject }}</td>
+          </tr>
+          
+          <tr>
+            <th>{{ form.message.label }}</th>
+            <td>{{ form.message }}</td>
+          </tr>
+        
+          <tr>
+            <th></th>
+            <td>{{ form.submit }}</td>
+          </tr>
+       </table>
+        
+      
+        
+        
+      </form>
+      
+    </div>
+    
+    <div class="col-lg-2"></div>
+  </div>
+
+{% endblock %}
