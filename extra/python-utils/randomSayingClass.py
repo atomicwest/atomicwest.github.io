@@ -109,7 +109,7 @@ class RandSaying():
             sentence.append('the')
             sentence.append(self.objects[rIdx(self.objects)])
         
-            return ' '.join(sentence)
+            return ' '.join(sentence) + '.'
         #-----------------------------------------------
         
         for i in range(numSentences):
