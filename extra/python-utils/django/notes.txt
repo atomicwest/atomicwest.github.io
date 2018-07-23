@@ -1,0 +1,102 @@
+sudo apt-get update
+
+sudo apt-get install python3.x
+
+pip install virtualenv
+
+virtualenv venv -p /usr/bin/python3.x
+
+activate virtual environment
+
+pip install Django
+
+- - - - postgres - - - - 
+https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+
+sudo apt-get install postgresql postgresql-contrib
+sudo apt-get install postgresql-10      -- for ubuntu versions above 14.04
+
+sudo apt-get install postgresql-9.3     --for ubuntu 14.04; usually already installed
+
+pip install psycopg2
+
+in terminal; there should already be a user named postgres 
+
+$ sudo su - postgres
+$ psql
+
+if there is an error:
+psql: could not connect to server: Connection refused
+        Is the server running locally and accepting
+        connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+        
+then run:
+$ sudo /etc/init.d/postgresql restart
+
+AND THEN run:
+$ sudo su - postgres
+$ psql
+
+
+-   -   -   -   -   -   -
+> CREATE DATABASE myproject;
+> CREATE USER myprojectuser WITH PASSWORD 'password';   
+
+> ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+> ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+> ALTER ROLE myprojectuser SET timezone TO 'UTC';
+
+GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+
+\q
+
+exit
+
+now create project:
+$ django-admin startproject nameofproject .
+
+then edit settings.py:
+****keep all db and user names lowercase
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+- - - - - - - - 
+
+install components of the  django-toolbelt:
+- gunicorn (WSGI server)
+– dj-database-url (a Django configuration helper)
+– dj-static (a Django static file server)
+
+$ sudo pip install gunicorn dj-database-url dj-static
+
+in settings.py, allowedhosts, add  '[name of shel].c9users.io'
+
+
+
+*********to run on cloud9
+run a migration first:
+$ python manage.py makemigrations
+$ python manage.py migrate
+
+cd into dir with manage.py and run:
+$ python manage.py runserver $IP:$PORT
+
+
+--=================================
+$ python manage.py startapp mainsite
+
+add to mainsite/views.py 
+    def index(request) -> which will actually render the view
+    
+create urls.py in same directory as views.py
+
+point root urls.py to the app-level urls.py
