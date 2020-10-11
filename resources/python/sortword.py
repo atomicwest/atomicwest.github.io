@@ -23,5 +23,5 @@ def combineStringList(sl):
     return out
 
 
-test = "jesson go"
+test = "asdf"
 print(sortWord(test))
